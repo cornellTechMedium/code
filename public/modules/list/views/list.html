@@ -1,18 +1,171 @@
-<div layout="row" layout-wrap layout-align="center center">
-  
-  <div flex="30" flex-sm="45" flex-xs="80">
-    <md-list>
-      <div ng-repeat="listItem in List.listItems.list">
-        <md-list-item target="_blank" ng-href="{{ listItem.link }}" class="md-2-line" ng-click="null">
-          <img ng-src="{{ listItem.image }}" class="md-avatar" />
-          <div class="md-list-item-text" layout="column">
-            <h3>{{ listItem.title }}</h3>
-            <p>{{ listItem.link }}</p>
-          </div>
-        </md-list-item>
-        <md-divider ></md-divider>
-      </div>
-    </md-list>
-  </div>
+<!--<div layout="row" layout-wrap layout-align="center center">-->
+  <!---->
+  <!--<div flex="30" flex-sm="45" flex-xs="80">-->
+    <!--<md-list>-->
+      <!--<div ng-repeat="listItem in List.listItems.list">-->
+        <!--<md-list-item target="_blank" ng-href="{{ listItem.link }}" class="md-2-line" ng-click="null">-->
+          <!--<img ng-src="{{ listItem.image }}" class="md-avatar" />-->
+          <!--<div class="md-list-item-text" layout="column">-->
+            <!--<h3>{{ listItem.title }}</h3>-->
+            <!--<p>{{ listItem.link }}</p>-->
+          <!--</div>-->
+        <!--</md-list-item>-->
+        <!--<md-divider ></md-divider>-->
+      <!--</div>-->
+    <!--</md-list>-->
+  <!--</div>-->
 
+<!--</div>-->
+<div layout="row" layout-wrap layout-align="center center">
+  <div class="page-header">
+    <h3 class="md-title">Timeline</h3>
+  </div>
+  <ul class="timeline">
+    <li>
+      <div class="timeline-panel">
+        <div class="timeline-heading">
+          <h4 class="timeline-title">iTrek presentation to Cornell Tech students</h4>
+          <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i>Sep 13</small></p>
+        </div>
+        <div class="timeline-body">
+          <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
+        </div>
+      </div>
+    </li>
+    <li class="timeline-inverted">
+      <div class="timeline-panel">
+        <div class="timeline-heading">
+          <h4 class="timeline-title">First payment of $1,500 is due (and buy your airline ticket!)</h4>
+          <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i>Sep 21</small></p>
+        </div>
+        <div class="timeline-body">
+          <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
+          <p>Suco de cevadiss, é um leite divinis, qui tem lupuliz, matis, aguis e fermentis. Interagi no mé, cursus quis, vehicula ac nisi. Aenean vel dui dui. Nullam leo erat, aliquet quis tempus a, posuere ut mi. Ut scelerisque neque et turpis posuere pulvinar pellentesque nibh ullamcorper. Pharetra in mattis molestie, volutpat elementum justo. Aenean ut ante turpis. Pellentesque laoreet mé vel lectus scelerisque interdum cursus velit auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ac mauris lectus, non scelerisque augue. Aenean justo massa.</p>
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="timeline-panel">
+        <div class="timeline-heading">
+          <h4 class="timeline-title">Challenges are posted for students to choose</h4>
+          <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i>Sep 26</small></p>
+        </div>
+        <div class="timeline-body">
+          <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
+        </div>
+      </div>
+    </li>
+    <li class="timeline-inverted">
+      <div class="timeline-panel">
+        <div class="timeline-heading">
+          <h4 class="timeline-title">Students submit their preferences</h4>
+          <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i>Sep 29</small></p>
+        </div>
+        <div class="timeline-body">
+          <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="timeline-panel">
+        <div class="timeline-heading">
+          <h4 class="timeline-title">Matching of students and startups are announced </h4>
+          <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i>Oct 5</small></p>
+        </div>
+        <div class="timeline-body">
+          <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
+          <hr>
+          <div class="btn-group">
+            <button type="button" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown">
+              <i class="glyphicon glyphicon-cog"></i> <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="#">Action</a></li>
+              <li><a href="#">Another action</a></li>
+              <li><a href="#">Something else here</a></li>
+              <li class="divider"></li>
+              <li><a href="#">Separated link</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="timeline-panel">
+        <div class="timeline-heading">
+          <h4 class="timeline-title">the first weekly call with each startup has to be arranged</h4>
+          <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i>Week of Oct 5th</small></p>
+        </div>
+        <div class="timeline-body">
+          <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
+        </div>
+      </div>
+    </li>
+    <li class="timeline-inverted">
+      <div class="timeline-panel">
+        <div class="timeline-heading">
+          <h4 class="timeline-title">Shopyourway presentation (Sears)</h4>
+          <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i>Oct XXX</small></p>
+        </div>
+        <div class="timeline-body">
+          <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="timeline-panel">
+        <div class="timeline-heading">
+          <h4 class="timeline-title">First milestone</h4>
+          <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i>Nov 8 & 9</small></p>
+        </div>
+        <div class="timeline-body">
+          <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
+        </div>
+      </div>
+    </li>
+    <li class="timeline-inverted">
+      <div class="timeline-panel">
+        <div class="timeline-heading">
+          <h4 class="timeline-title">Second payment is due (TBD)</h4>
+          <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i>Nov 9</small></p>
+        </div>
+        <div class="timeline-body">
+          <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="timeline-panel">
+        <div class="timeline-heading">
+          <h4 class="timeline-title">Second milestone</h4>
+          <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i>Dec 7 & 8</small></p>
+        </div>
+        <div class="timeline-body">
+          <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
+        </div>
+      </div>
+    </li>
+    <li class="timeline-inverted">
+      <div class="timeline-panel">
+        <div class="timeline-heading">
+          <h4 class="timeline-title">iTrek starts!</h4>
+          <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i>Jan 7 (eve)</small></p>
+        </div>
+        <div class="timeline-body">
+          <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="timeline-panel">
+        <div class="timeline-heading">
+          <h4 class="timeline-title">iTrek ends :(</h4>
+          <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i>Jan 20</small></p>
+        </div>
+        <div class="timeline-body">
+          <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
+        </div>
+      </div>
+    </li>
+  </ul>
 </div>
