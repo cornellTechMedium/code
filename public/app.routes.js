@@ -15,7 +15,7 @@ router.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
         })
         .state('card', {
             url: '/cards/{cardId}',
-            templateUrl: '/modules/cards/views/cards.html',
+            templateUrl: '/modules/cards/views/card.html',
             controller: 'cardsCtrl',
             controllerAs: 'Cards',
             params: {
