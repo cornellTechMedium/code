@@ -163,3 +163,12 @@ md-tabs md-tabs-wrapper {
 .btn1 {
     margin: 6px 8px 6px -2px;
 }
+.img1 {
+    position: relative;
+    float: left;
+    width:  100px;
+    height: 100px;
+    background-position: 50% 50%;
+    background-repeat:   no-repeat;
+    background-size:     cover;
+}

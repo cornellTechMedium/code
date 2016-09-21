@@ -2,6 +2,7 @@
   "list": [
     {
       "id": 1,
+      "image": "./temp-assets/",
       "name": "Eco-Fusion",
       "tag_line": "Mobile Apps for Preventing or Managing Chronic Diseases",
       "description": "Eco-Fusion is a digital therapy company, offering a flexible mobile platform that helps prevent or treats a variety of chronic illnesses, including stress, anxiety, diabetes, obesity, and cardio-vascular diseases.\nUnlike large care management systems that require an IT project to get off the ground, Eco-Fusion requires no more than a smartphone and is effective from day one. Its first product, Serenita, accurately measures and treats stress. It was named \"Best Health App of the Year\" by the Doctors 2.0 organization in June 2015 and has produced significant results in clinical trials on diabetic populations. The platform suits primary and specialty care clinics and payers concerned about escalating treatment cost and low adherence rates.",
@@ -100,7 +101,8 @@
       "market_capital_year": "",
       "num_israeli_acquisitions": "",
       "country": "",
-      "$$hashKey": "object:19"
+      "$$hashKey": "object:19",
+      "image": "./temp-assets/"
     },
     {
       "id": 3,
@@ -150,7 +152,8 @@
       "market_capital_year": "",
       "num_israeli_acquisitions": "",
       "country": "",
-      "$$hashKey": "object:20"
+      "$$hashKey": "object:20",
+      "image": "./temp-assets/"
     },
     {
       "id": 4,
@@ -197,7 +200,8 @@
       "market_capital_year": "",
       "num_israeli_acquisitions": "",
       "country": "",
-      "$$hashKey": "object:21"
+      "$$hashKey": "object:21",
+      "image": "./temp-assets/"
     },
     {
       "id": 5,
@@ -243,7 +247,8 @@
       "market_capital_year": "",
       "num_israeli_acquisitions": "",
       "country": "",
-      "$$hashKey": "object:22"
+      "$$hashKey": "object:22",
+      "image": "./temp-assets/"
     },
     {
       "id": 6,
@@ -290,7 +295,8 @@
       "market_capital_year": "",
       "num_israeli_acquisitions": "",
       "country": "",
-      "$$hashKey": "object:23"
+      "$$hashKey": "object:23",
+      "image": "./temp-assets/"
     },
     {
       "id": 7,
@@ -341,7 +347,8 @@
       "market_capital_year": "",
       "num_israeli_acquisitions": "",
       "country": "",
-      "$$hashKey": "object:24"
+      "$$hashKey": "object:24",
+      "image": "./temp-assets/"
     },
     {
       "id": 8,
@@ -388,7 +395,8 @@
       "market_capital_year": "",
       "num_israeli_acquisitions": "",
       "country": "",
-      "$$hashKey": "object:25"
+      "$$hashKey": "object:25",
+      "image": "./temp-assets/"
     },
     {
       "id": 9,
@@ -437,7 +445,8 @@
       "market_capital_year": "",
       "num_israeli_acquisitions": "",
       "country": "",
-      "$$hashKey": "object:26"
+      "$$hashKey": "object:26",
+      "image": "./temp-assets/"
     },
     {
       "id": 10,
@@ -493,7 +502,8 @@
       "market_capital_year": "",
       "num_israeli_acquisitions": "",
       "country": "",
-      "$$hashKey": "object:27"
+      "$$hashKey": "object:27",
+      "image": "./temp-assets/"
     },
     {
       "id": 11,
@@ -542,7 +552,8 @@
       "market_capital_year": "",
       "num_israeli_acquisitions": "",
       "country": "",
-      "$$hashKey": "object:28"
+      "$$hashKey": "object:28",
+      "image": "./temp-assets/"
     },
     {
       "id": 12,
@@ -588,7 +599,8 @@
       "market_capital_year": "",
       "num_israeli_acquisitions": "",
       "country": "",
-      "$$hashKey": "object:29"
+      "$$hashKey": "object:29",
+      "image": "./temp-assets/"
     },
     {
       "id": 13,
@@ -638,7 +650,8 @@
       "market_capital_year": "",
       "num_israeli_acquisitions": "",
       "country": "",
-      "$$hashKey": "object:30"
+      "$$hashKey": "object:30",
+      "image": "./temp-assets/"
     },
     {
       "id": 14,
@@ -685,7 +698,8 @@
       "market_capital_year": "",
       "num_israeli_acquisitions": "",
       "country": "",
-      "$$hashKey": "object:31"
+      "$$hashKey": "object:31",
+      "image": "./temp-assets/"
     },
     {
       "id": 15,
@@ -731,7 +745,8 @@
       "market_capital_year": "",
       "num_israeli_acquisitions": "",
       "country": "",
-      "$$hashKey": "object:32"
+      "$$hashKey": "object:32",
+      "image": "./temp-assets/"
     },
     {
       "id": 16,
@@ -781,7 +796,8 @@
       "market_capital_year": "",
       "num_israeli_acquisitions": "",
       "country": "",
-      "$$hashKey": "object:33"
+      "$$hashKey": "object:33",
+      "image": "./temp-assets/"
     },
     {
       "id": 17,
@@ -828,7 +844,8 @@
       "market_capital_year": "",
       "num_israeli_acquisitions": "",
       "country": "",
-      "$$hashKey": "object:34"
+      "$$hashKey": "object:34",
+      "image": "./temp-assets/"
     },
     {
       "id": 18,
@@ -875,7 +892,8 @@
       "market_capital_year": "",
       "num_israeli_acquisitions": "",
       "country": "",
-      "$$hashKey": "object:35"
+      "$$hashKey": "object:35",
+      "image": "./temp-assets/"
     },
     {
       "id": 19,
@@ -922,7 +940,8 @@
       "market_capital_year": "",
       "num_israeli_acquisitions": "",
       "country": "",
-      "$$hashKey": "object:36"
+      "$$hashKey": "object:36",
+      "image": "./temp-assets/"
     },
     {
       "id": 20,
@@ -973,10 +992,11 @@
       "market_capital_year": "",
       "num_israeli_acquisitions": "",
       "country": "",
-      "$$hashKey": "object:37"
+      "$$hashKey": "object:37",
+      "image": "./temp-assets/"
     },
     {
-      "id": 20,
+      "id": 21,
       "name": "PhysiMax Technologies",
       "tag_line": "Maximizing Physical Performance ",
       "description": "PhysiMax Technologies Ltd is a technology company and a graduate of the Georgia Tech accelerator program. PhysiMax has built the first real-time Athletic Movement Assessment solution, reliably scoring an athlete's risk of injury and athletic performance. It offers a cloud-based movement assessment service to automatically capture and extract the human quality of motion with no markers, identify and measure full-body kinematic events, and weigh and convert measurements into evidence-based performance scoring.\nPhysiMax serves top athletic business programs and prominent healthcare organizations. PhysiMax technology has been validated by three top US academic institutions: University of North Carolina, University of Connecticut and the US Military Academy at West Point.",
@@ -1029,10 +1049,11 @@
       "market_capital_year": "",
       "num_israeli_acquisitions": "",
       "country": "",
-      "$$hashKey": "object:38"
+      "$$hashKey": "object:38",
+      "image": "./temp-assets/"
     },
     {
-      "id": 21,
+      "id": 22,
       "name": "AlgoValue",
       "tag_line": "Online Valuation Platform and Cap Table Analysis",
       "description": "AlgoValue is an online valuation platform and cap table analysis to valuate early stage and mature companies as well as their equity securities, including preferred stock, convertible notes, warrants, stock options, common shares, and others.\nIn addition, AlgoValue enables users to simulate consequences of future funding rounds/M&A/IPO in terms of founders and other investor holdings. Lastly, AlgoValue is used for financial reporting and tax compliance and produces templates that are workpaper-ready, saving hours of time for financial statement auditors.\nAlgoValue is used by startups, private companies, valuation firms, accounting firms, venture capital firms, law firms, and secondary market platforms in the US, Israel and Europe.",
@@ -1078,10 +1099,11 @@
       "market_capital_year": "",
       "num_israeli_acquisitions": "",
       "country": "",
-      "$$hashKey": "object:39"
+      "$$hashKey": "object:39",
+      "image": "./temp-assets/"
     },
     {
-      "id": 22,
+      "id": 23,
       "name": "CropX",
       "tag_line": "Adaptive Irrigation Software to Optimize Water Use",
       "description": "CropX is an agro-analytics company that has developed an adaptive irrigation service for optimizing irrigation. The system saves up to 25% of the water and energy used for irrigating large ﬁelds and achieves a corresponding increase in crop yield.\nThe company’s system automatically analyzes in real time the exact water needs of different parts of each ﬁeld, and then guides irrigation accordingly. Wireless sensors send their readings to the CropX cloud where its patent-pending pattern-recognition analysis determines the right amount of water each part of the ﬁeld needs.",
@@ -1128,10 +1150,11 @@
       "market_capital_year": "",
       "num_israeli_acquisitions": "",
       "country": "",
-      "$$hashKey": "object:40"
+      "$$hashKey": "object:40",
+      "image": "./temp-assets/"
     },
     {
-      "id": 23,
+      "id": 24,
       "name": "Farm Dog",
       "tag_line": "App for Pest and Disease Management",
       "description": "Farm Dog has developed a comprehensive, standardized system for pest and disease management that includes an in-field workflow tool and web dashboard supported by data analytics.\nFarm Dog's app allows users to record pest, disease, weeds, trap counts, and other findings; geo-reference and photograph findings; keep track of field visits and set reminders for special checkups; return to past hotspots and visit neglected areas; receive pest notices; and send external reports from the field.",
@@ -1175,10 +1198,11 @@
       "market_capital_year": "",
       "num_israeli_acquisitions": "",
       "country": "",
-      "$$hashKey": "object:41"
+      "$$hashKey": "object:41",
+      "image": "./temp-assets/"
     },
     {
-      "id": 24,
+      "id": 25,
       "name": "SCREEMO",
       "tag_line": "Mobile to Screen Interactive Experiences",
       "description": "SCREEMO helps brands to engage with their customers and create a call to action that drive up sales and promote products. Using fun and engaging, connected devices (IoT) campaigns that runs in brick and mortar stores, QSRs, Cinema etc. on public connected devices such as digital screens and attract customers to interact using their smartphones or wearables\nSCREEMO patent pending, Do It Yourself SaaS enables designers to create connected devices campaigns in a codeless manner without needing developers, which makes it easy and affordable for any content creator.",
@@ -1226,10 +1250,11 @@
       "market_capital_year": "",
       "num_israeli_acquisitions": "",
       "country": "",
-      "$$hashKey": "object:42"
+      "$$hashKey": "object:42",
+      "image": "./temp-assets/"
     },
     {
-      "id": 25,
+      "id": 26,
       "name": "Beyon3D",
       "tag_line": "Digitalizing the Building Industry",
       "description": "Beyon3D is a multidisciplinary building technology company. Beyon3D develops an innovative digital manufacturing system, based on the use of industrial robotic arms and custom made software tools and hardware.\nThe company aims to disrupt the multi-billion dollar - yet inefficient - construction market by bringing about a robotic based system that can manufacture building components in higher quality, faster, cheaper, in any scale or geometrical shape.\nBeyon3D supports architects and designers in realizing non-standard, complex projects at all scales. Utilizing the latest File-To-Factory strategies, we deliver high quality, custom solutions to our clients, to take advantage of the efficiency and flexibility of parametric modelling, as well as digital manufacturing quality, precision, and speed.",
@@ -1269,10 +1294,11 @@
       "market_capital_year": "",
       "num_israeli_acquisitions": "",
       "country": "",
-      "$$hashKey": "object:43"
+      "$$hashKey": "object:43",
+      "image": "./temp-assets/"
     },
     {
-      "id": 26,
+      "id": 27,
       "name": "BE Financial Technology",
       "tag_line": "Simplifying Financial Decisions",
       "description": "BE Financial Technology Ltd  provides an automated ETP (Exchange Traded Products) platform. The system enables its users to efficiently collect all the parameters necessary for evaluating the Total Cost of Ownership (TCO) of each ETP in a competing ETP group.\n\nFinding the relevant comparison group is simplified with our user-friendly search and filter tools. This system enables users to easily find the index or other benchmark they need and link them directly to the relevant ETPs for comparison. In addition to comparing ETPs’ trading relative to their benchmark level in real time, BE System captures this intraday data and generates meaningful historic statistics, to help users get a broader perspective on how well the ETPs track their respective benchmarks.\n\nBE provides a benchmark tool for financial advisors enabling them to create their own comparing model.\n\n",
@@ -1313,10 +1339,11 @@
       "market_capital_year": "",
       "num_israeli_acquisitions": "",
       "country": "",
-      "$$hashKey": "object:44"
+      "$$hashKey": "object:44",
+      "image": "./temp-assets/"
     },
     {
-      "id": 27,
+      "id": 28,
       "name": "Wiseye Video Systems",
       "tag_line": "Video Based BI for Retailers",
       "description": "Wiseye Video Systems Ltd, is the innovative leader in end-user behavior platforms for retail and store chains. Wiseye enables store managers to react in real time to the different situations that can occur during the opening hours of the store as well as advanced store inventory planning. The platform assists store managers to dynamically allocate the staff within the store, automatically spot Out-of-Stock locations and highlight which areas are more visited in comparison to others. In addition, the platform provides an accurate view of the customer behavior from the moment he enters the store.\n\nWiseye Retail Efficiency Monitoring delivers incredibly reliable real time key performance figures to enhance the profitability of your retail business. The system has been successfully commissioned within three retail chains in Israel, and currently being implemented throughout their branches across Israel and Europe.\n",
@@ -1362,7 +1389,8 @@
       "market_capital_year": "",
       "num_israeli_acquisitions": "",
       "country": "",
-      "$$hashKey": "object:45"
+      "$$hashKey": "object:45",
+      "image": "./temp-assets/"
     }
   ]
 }
