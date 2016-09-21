@@ -1,0 +1,25 @@
+{
+	"list":[
+		{
+			"id":"1",
+			"image":"./temp-assets/card-material.png",
+			"title":"Material Design",
+			"link":"http://material.google.com",
+			"description":"company #1"
+		},
+		{
+			"id":"2",
+			"image":"./temp-assets/card-angular-material.png",
+			"title":"Angular Material",
+			"link":"http://material.angularjs.org",
+			"description":"company #2"
+		},
+		{
+			"id":"3",
+			"image":"./temp-assets/card-materialup.png",
+			"title":"MaterialUp",
+			"link":"http://www.materialup.com",
+			"description":"company #3"
+		}
+	]
+}

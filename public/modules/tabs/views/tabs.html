@@ -1,10 +1,20 @@
-<md-content>
-  <md-tabs md-dynamic-height md-border-bottom>
-    <md-tab ng-repeat="tab in Tabs.tabItems.list" label="{{ tab.title }}">
-      <md-content class="md-padding padding-inner">
-        <h3 class="md-headline">{{ tab.title }}</h3>
-        <p>{{ tab.text }}</p>
-      </md-content>
-    </md-tab>
-  </md-tabs>
-</md-content>
+<div class="padding-inner">
+
+  <div layout="row" layout-wrap layout-align="start center">
+    <div flex="33" flex-sm="50" flex-xs="100" ng-repeat="tabItem in Tabs.tabItems.list">
+      <md-card>
+        <img ng-src="{{cardItem.title}}" class="md-card-image" alt="">
+        <md-card-title layout="row" layout-align="space-between-center" layout-wrap>
+          <md-card-title-text>
+            <span class="md-title">{{ tabItem.title }}</span>
+            <span class="md-body">{{ tabItem.text }}</span>
+          </md-card-title-text>
+          <md-button class="md-icon-button" href="/tabs/{{ tabItem.id }}" aria-label="Close User Menu">
+            <md-icon md-font-icon="fa-external-link" class="md-menu-text-color fa s24"></md-icon>
+          </md-button>
+        </md-card-title>
+      </md-card>
+    </div>
+  </div>
+
+</div>
