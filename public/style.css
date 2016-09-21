@@ -163,3 +163,7 @@ md-tabs md-tabs-wrapper {
 .btn1 {
     margin: 6px 8px 6px -2px;
 }
+.card1 {
+    height: 48px;
+    width: auto;
+}
