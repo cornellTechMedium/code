@@ -6,11 +6,14 @@
       <md-card >
         <a href="/cards/{{ cardItem.id }}"><img ng-src="{{cardItem.image}}{{cardItem.id}}.png" class="md-card-image card1" alt=""></a>
 
+        <a href="/cards/{{ cardItem.id }}">
         <md-card-content>
           <p>
             {{cardItem.tag_line}}
           </p>
+
         </md-card-content>
+        </a>
       </md-card>
 
     </div>
