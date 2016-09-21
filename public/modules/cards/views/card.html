@@ -2,6 +2,7 @@
     <div flex="33" flex-sm="50" flex-xs="100" ng-repeat="cardItem in Cards.cardItems.list">
       <div layout="row" layout-wrap layout-align="start center">
         <md-content layout-padding>
+
           <h3 class="md-title">{{cardItem.name}}</h3>
           <p>{{cardItem.description}}</p>
 
@@ -14,6 +15,7 @@
           </md-chips>
         </div>
         </md-content>
+        <md-button flex-xs="100" class="md-raised md-primary btn1" href="/cards">Back</md-button>
     </div>
   </div>
 </div>
