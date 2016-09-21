@@ -4,39 +4,15 @@
     <div flex="33" flex-sm="50" flex-xs="100" ng-repeat="cardItem in Cards.cardItems.list">
 
       <md-card>
-        <a href="/cards/{{ cardItem.id }}"><img ng-src="{{cardItem.image}}{{cardItem.id}}.png" class="md-card-image img1" alt=""></a>
+        <a href="/cards/{{ cardItem.id }}"><img ng-src="{{cardItem.image}}{{cardItem.id}}.png" class="md-card-image" alt=""></a>
 
         <md-card-content>
           <p>
             {{cardItem.tag_line}}
           </p>
         </md-card-content>
-        <!--<md-card-actions layout="row" layout-align="end center">-->
-          <!--<md-button class="md-icon-button" aria-label="Favorite">-->
-            <!--<md-icon md-svg-icon="img/icons/favorite.svg"></md-icon>-->
-          <!--</md-button>-->
-          <!--<md-button class="md-icon-button" aria-label="Settings">-->
-            <!--<md-icon md-svg-icon="img/icons/menu.svg"></md-icon>-->
-          <!--</md-button>-->
-          <!--<md-button class="md-icon-button" aria-label="Share">-->
-            <!--<md-icon md-svg-icon="img/icons/share-arrow.svg"></md-icon>-->
-          <!--</md-button>-->
-        <!--</md-card-actions>-->
       </md-card>
 
-
-
-      <!--<md-card md-whiteframe="3">-->
-        <!--<a href="/cards/{{ cardItem.id }}"><img ng-src="{{cardItem.image}}{{cardItem.id}}.png" class="md-card-image" alt=""></a>-->
-        <!--<md-card-title layout="row" layout-align="space-between-center" layout-wrap>-->
-          <!--&lt;!&ndash;<md-card-title-text>&ndash;&gt;-->
-            <!--&lt;!&ndash;<span class="md-title">{{ cardItem.name }}</span>&ndash;&gt;-->
-          <!--&lt;!&ndash;</md-card-title-text>&ndash;&gt;-->
-          <!--<md-button class="md-icon-button" href="/cards/{{ cardItem.id }}" aria-label="Close User Menu">-->
-            <!--<md-icon md-font-icon="fa-external-link" class="md-menu-text-color fa s24"></md-icon>-->
-          <!--</md-button>-->
-        <!--</md-card-title>-->
-      <!--</md-card>-->
     </div>
   </div>
 
