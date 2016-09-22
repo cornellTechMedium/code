@@ -1,7 +1,31 @@
 <div class="padding-inner">
-
+  <div layout="row" layout-wrap layout-align="center center">
+    <form ng-submit="$event.preventDefault()">
+      <p>Search companies based on their names or tags.</p>
+      <md-autocomplete
+              ng-disabled="Cards.isDisabled"
+              md-no-cache="Cards.noCache"
+              md-selected-item="Cards.selectedItem"
+              md-search-text-change="Cards.searchTextChange(Cards.searchText)"
+              md-search-text="Cards.searchText"
+              md-selected-item-change="Cards.selectedItemChange(item)"
+              md-items="item in Cards.querySearch(Cards.searchText)"
+              md-item-text="item.display"
+              md-min-length="0"
+              placeholder="What company are you looking for?">
+        <md-item-template>
+          <a href="/cards/{{item.id}}"><span md-highlight-text="Cards.searchText" md-highlight-flags="^i">{{item.name}}</span></a>
+        </md-item-template>
+        <md-not-found>
+          No companies "{{Cards.searchText}}" were found.
+          <!--<a ng-click="Cards.newState(Cards.searchText)">Create a new one!</a>-->
+        </md-not-found>
+      </md-autocomplete>
+      <br/>
+    </form>
+  </div>
   <div layout="row" layout-wrap layout-align="start center">
-    <div  flex="33" flex-sm="50" flex-xs="100" ng-repeat="cardItem in Cards.cardItems.list">
+    <div flex="33" flex-sm="50" flex-xs="100" ng-repeat="cardItem in Cards.cardItems.list">
 
       <md-card >
         <a href="/cards/{{ cardItem.id }}"><img ng-src="{{cardItem.image}}{{cardItem.id}}.png" class="md-card-image card1" alt=""></a>
