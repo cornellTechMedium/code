@@ -206,7 +206,7 @@
     {
       "id": 5,
       "name": "Precog",
-      "tag_line": "Predictive Maintenance and Control for Complex Industrial Systems",
+      "tag_line": "Predictive Maintenance and Control for Industrial Systems",
       "description": "Precog is the only predictive maintenance solution for complex industrial sites that combines both expert’s knowledge and machine learning and as such can work with any type of equipment.\nPrecog was selected by BASF SE (ETR: BAS), General Electric (NYSE: GE) and others. Precog is also part of the GE Predix program.",
       "tags": [
         "machine-learning",
