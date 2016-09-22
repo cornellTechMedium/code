@@ -14,8 +14,9 @@
               md-min-length="0"
               placeholder="What company are you looking for?">
         <md-item-template>
-          <a href="/cards/{{item.id}}"><span md-highlight-text="Cards.searchText" md-highlight-flags="^i">{{item.name}}</span></a>
+          <a style="display:block" class="companyLink" href="/cards/{{item.id}}"><span md-highlight-text="Cards.searchText" md-highlight-flags="^i">{{item.name}}</span></a>
         </md-item-template>
+
         <md-not-found>
           No companies "{{Cards.searchText}}" were found.
           <!--<a ng-click="Cards.newState(Cards.searchText)">Create a new one!</a>-->
@@ -28,9 +29,9 @@
     <div flex="33" flex-sm="50" flex-xs="100" ng-repeat="cardItem in Cards.cardItems.list">
 
       <md-card class="card1">
-        <a href="/cards/{{ cardItem.id }}"><img ng-src="{{cardItem.image}}{{cardItem.id}}.png" class="md-card-image img1" alt=""></a>
+        <a href="/cards/{{ cardItem.id }}" class="companyLink"><img ng-src="{{cardItem.image}}{{cardItem.id}}.png" class="md-card-image img1" alt=""></a>
 
-        <a href="/cards/{{ cardItem.id }}">
+        <a href="/cards/{{ cardItem.id }}" class="companyLink">
         <md-card-content>
           <p>
             {{cardItem.tag_line}}

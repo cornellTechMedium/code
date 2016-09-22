@@ -174,3 +174,6 @@ md-tabs md-tabs-wrapper {
 .search1 {
     margin: 8px;
 }
+.companyLink {
+    text-decoration: none !important;
+}
