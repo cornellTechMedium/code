@@ -7,7 +7,7 @@ h1,h2,h3,h4,h5,h6 {
     margin-top: 1rem;
 }
 .padding-inner {
-    padding: 30px 5%;
+    padding: 60px 5%;
 }
 /* Overwrite Defaults */
 md-toolbar.toolbar h1, md-toolbar.md-toolbar-tools h3, md-tabs md-tabs-wrapper md-tab-item span, md-tabs md-tabs-wrapper md-icon, .md-primary span {
