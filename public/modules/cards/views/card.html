@@ -6,7 +6,8 @@
           <h3 class="md-title">{{cardItem.name}}</h3>
           <p>{{cardItem.description}}</p>
 
-
+          <a href="{{cardItem.homepage}}" target="_blank"><span>{{cardItem.homepage}}</span></a>
+          <a href="http://{{cardItem.finder_url}}" target="_blank"><span>{{cardItem.finder_url}}</span></a>
         <div flex="auto">
           <md-chips ng-model="cardItem.tags" name="tags" readonly="true">
             <md-chip-template>
