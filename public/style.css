@@ -177,3 +177,19 @@ md-tabs md-tabs-wrapper {
 .companyLink {
     text-decoration: none !important;
 }
+.video-container {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 120px 5%;
+    /* Set rules to fill background */
+    min-height: 100%;
+    /*min-width: 1024px;*/
+
+    /* Set up proportionate scaling */
+    height: auto;
+
+    /* Set up positioning */
+    position: fixed;
+}
