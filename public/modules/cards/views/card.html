@@ -6,10 +6,10 @@
           <h3 class="md-title">{{cardItem.name}}</h3>
           <p>{{cardItem.description}}</p>
           <md-divider></md-divider>
-          <a href="{{cardItem.homepage}}" target="_blank"><span>Company homepage</span></a>
-          <md-divider></md-divider>
+          <a href="{{cardItem.homepage}}" target="_blank"><span>Company homepage</span></a><br/>
+          <!--<md-divider></md-divider>-->
           <a href="http://{{cardItem.finder_url}}" target="_blank"><span>More information</span></a>
-          <md-divider></md-divider>
+          <!--<md-divider></md-divider>-->
           <div flex="auto">
           <md-chips ng-model="cardItem.tags" name="tags" readonly="true">
             <md-chip-template>
