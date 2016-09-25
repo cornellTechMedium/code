@@ -196,3 +196,6 @@ md-tabs md-tabs-wrapper {
 .navitem1:hover {
     font-weight: bolder;
 }
+.link-button {
+    color: black;
+}
