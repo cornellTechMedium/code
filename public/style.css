@@ -193,3 +193,6 @@ md-tabs md-tabs-wrapper {
     /* Set up positioning */
     position: fixed;
 }
+.navitem1:hover {
+    font-weight: bolder;
+}
