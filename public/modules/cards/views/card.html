@@ -7,7 +7,7 @@
           <p>{{cardItem.description}}</p>
           <md-divider></md-divider>
           <md-button md-no-ink class="link-button" href="{{cardItem.homepage}}" target="_blank">Company homepage</md-button>
-          <md-button md-no-ink class="link-button" href="http://{{cardItem.finder_url}}" target="_blank">More information</md-button>
+          <md-button elclass="link-button" href="http://{{cardItem.finder_url}}" target="_blank">More information</md-button>
           <div flex="auto">
           <md-chips ng-model="cardItem.tags" name="tags" readonly="true">
             <md-chip-template>
