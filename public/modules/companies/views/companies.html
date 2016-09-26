@@ -16,7 +16,6 @@
         <md-item-template>
           <a style="display:block" class="companyLink" href="/companies/{{item.id}}"><span md-highlight-text="Cards.searchText" md-highlight-flags="^i">{{item.name}}</span></a>
         </md-item-template>
-
         <md-not-found>
           No companies "{{Cards.searchText}}" were found.
           <!--<a ng-click="Cards.newState(Cards.searchText)">Create a new one!</a>-->
@@ -30,18 +29,14 @@
       <md-card class="card1" md-whiteframe="{{height}}"
                ng-init="height = 3" ng-mouseenter="height = 6" ng-mouseleave="height = 3">
         <a href="/companies/{{ cardItem.id }}" class="companyLink"><img ng-src="{{cardItem.image}}{{cardItem.id}}.png" class="md-card-image companyImage" alt=""></a>
-
         <a href="/companies/{{ cardItem.id }}" class="companyLink">
-        <md-card-content>
-          <p>
-            {{cardItem.tag_line}}
-          </p>
-
-        </md-card-content>
+          <md-card-content>
+            <p>
+              {{cardItem.tag_line}}
+            </p>
+          </md-card-content>
         </a>
       </md-card>
-
     </div>
   </div>
-
 </div>
