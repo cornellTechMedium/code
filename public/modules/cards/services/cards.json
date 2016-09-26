@@ -1675,6 +1675,7 @@
       "num_israeli_acquisitions": "",
       "$$hashKey": "object:50",
       "country": "",
+      "image": "./temp-assets/",
       "challengeId": 9
     },
     {
@@ -1722,6 +1723,7 @@
       "num_israeli_acquisitions": "",
       "$$hashKey": "object:51",
       "country": "",
+      "image": "./temp-assets/",
       "challengeId": 6
     },
     {
@@ -1730,7 +1732,6 @@
       "tag_line": "cloud, sales, software-applications, saas",
       "description": "Amdocs is the market leader in customer experience software solutions and services for the worlds largest communications, entertainment and media service providers. ",
       "tags": [
-        ""
       ],
       "finder_url": "",
       "homepage": "http://www.amdocs.com/",
@@ -1764,6 +1765,7 @@
       "num_israeli_acquisitions": "",
       "$$hashKey": "object:52",
       "country": "",
+      "image": "./temp-assets/",
       "challengeId": 4
     },
     {
@@ -1809,6 +1811,7 @@
       "num_israeli_acquisitions": "",
       "$$hashKey": "object:53",
       "country": "",
+      "image": "./temp-assets/",
       "challengeId": 14
     }
   ]
