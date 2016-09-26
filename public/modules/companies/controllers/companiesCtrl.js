@@ -1,5 +1,5 @@
-angular.module('cardsCtrl', ['cardsService'])
-.controller('cardsCtrl', function(Cards, $timeout, $q, $log, $stateParams, $rootScope) {
+angular.module('companiesCtrl', ['companiesService'])
+.controller('companiesCtrl', function(Cards, $timeout, $q, $log, $stateParams, $rootScope) {
 
 	self = this;
 

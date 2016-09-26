@@ -4,12 +4,12 @@ var materialApp = angular
     'ui.router',
     'ngMaterial',
     'appCtrl',
-    'cardsCtrl',
-    'cardsService',
+    'companiesCtrl',
+    'companiesService',
     'listCtrl',
     'listService',
-    'tabsCtrl',
-    'tabsService',
+    'challengesCtrl',
+    'challengesService',
     'angularVideoBg'
 ]).config(function($mdThemingProvider) {
   $mdThemingProvider.theme('default')

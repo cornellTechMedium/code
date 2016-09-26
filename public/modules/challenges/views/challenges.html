@@ -17,7 +17,7 @@
             {{ challengeItem.companies[0].company.tag_line }}
           </p>
           <md-card-actions layout="row" layout-align="start center">
-            <md-button href="/cards/{{ challengeItem.companies[0].id }}">See Company</md-button>
+            <md-button href="/companies/{{ challengeItem.companies[0].id }}">See Company</md-button>
           </md-card-actions>
           <md-chips ng-model="challengeItem.companies[0].company.tags" name="tags" readonly="true">
             <md-chip-template>
@@ -30,7 +30,7 @@
             {{ challengeItem.companies[1].company.tag_line }}
           </p>
           <md-card-actions layout="row" layout-align="start center">
-            <md-button href="/cards/{{ challengeItem.companies[1].id }}">See Company</md-button>
+            <md-button href="/companies/{{ challengeItem.companies[1].id }}">See Company</md-button>
           </md-card-actions>
           <md-chips ng-model="challengeItem.companies[1].company.tags" name="tags" readonly="true">
             <md-chip-template>
@@ -40,7 +40,7 @@
         </md-card-content>
 
         <md-card-actions layout="row" layout-align="end center">
-          <md-button href="/tabs/{{ challengeItem.id }}">See Challenge</md-button>
+          <md-button href="/challenges/{{ challengeItem.id }}">See Challenge</md-button>
         </md-card-actions>
       </md-card>
     </div>

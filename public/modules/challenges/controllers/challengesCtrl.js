@@ -1,8 +1,8 @@
 var FIRST_COMPANY_INDEX = 0;
 var SECOND_COMPANY_INDEX = 1;
 
-angular.module('tabsCtrl', ['tabsService', 'cardsService'])
-.controller('tabsCtrl', function(Tabs, Cards, $stateParams, $rootScope) {
+angular.module('challengesCtrl', ['challengesService', 'companiesService'])
+.controller('challengesCtrl', function(Tabs, Cards, $stateParams, $rootScope) {
 	
 	self = this;
 
@@ -18,8 +18,8 @@ angular.module('tabsCtrl', ['tabsService', 'cardsService'])
                 .success(function(data) {
 
                     // if this is a single challenge page
-                    if ($stateParams.tabId != null) {
-                        data.list = [data.list[$stateParams.tabId-1]];
+                    if ($stateParams.challengeId != null) {
+                        data.list = [data.list[$stateParams.challengeId-1]];
                     }
 
                     self.challenges = data;

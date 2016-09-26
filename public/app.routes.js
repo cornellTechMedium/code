@@ -14,19 +14,19 @@ router.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
             }
         })
         .state('card', {
-            url: '/cards/{cardId}',
-            templateUrl: '/modules/cards/views/card.html',
-            controller: 'cardsCtrl',
+            url: '/companies/{cardId}',
+            templateUrl: '/modules/companies/views/company.html',
+            controller: 'companiesCtrl',
             controllerAs: 'Cards',
             params: {
                 title: "Cards",
                 cardId: "{cardId}"
             }
         })
-        .state('cards', {
-            url: '/cards',
-            templateUrl: '/modules/cards/views/cards.html',
-            controller: 'cardsCtrl',
+        .state('companies', {
+            url: '/companies',
+            templateUrl: '/modules/companies/views/companies.html',
+            controller: 'companiesCtrl',
             controllerAs: 'Cards',
             params: {
                 title: "Cards"
@@ -41,23 +41,23 @@ router.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
                 title: "List"
             }
         })
-        .state('tabs', {
-            url: '/tabs',
-            templateUrl: '/modules/tabs/views/tabs.html',
-            controller: 'tabsCtrl',
+        .state('challenges', {
+            url: '/challenges',
+            templateUrl: '/modules/challenges/views/challenges.html',
+            controller: 'challengesCtrl',
             controllerAs: 'Tabs',
             params: {
                 title: "Tabs"
             }
         })
-        .state('tab', {
-            url: '/tabs/{tabId}',
-            templateUrl: '/modules/tabs/views/tab.html',
-            controller: 'tabsCtrl',
+        .state('challenge', {
+            url: '/challenges/{challengeId}',
+            templateUrl: '/modules/challenges/views/challenge.html',
+            controller: 'challengesCtrl',
             controllerAs: 'Tabs',
             params: {
-                title: "Tabs",
-                cardId: "{tabId}"
+                title: "Challenges",
+                cardId: "{challengeId}"
             }
         });
 
