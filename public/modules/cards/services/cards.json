@@ -916,7 +916,7 @@
     {
       "id": 19,
       "name": "Mobideo Technologies",
-      "tag_line": " Real-Time Operations Management ",
+      "tag_line": "Real-Time Operations Management ",
       "description": "Mobideo is an enterprise mobility platform providing real-time situational awareness of critical operations.\nMobideo’s real-time operations management software offers a robust platform to deliver mobile solutions that address the human resource component of complex business operations in discrete and continuous process industries.\n Mobideo absorbs all task execution activities at the most granular step-by-step level, the “how” things get done in any operation setting, by policies, procedures and best practices. Task execution details, together with data retrieved from ERP and other 3rd party enterprise software, are rapidly converted to a custom mobile application designed for tough environments which not only captures and validates all data entered but also captures the time and location of every granular step executed by the worker.\n This way, Mobideo enforces compliance to proper safety, environmental and other risk mitigation standards; guides and prevents workers from making mistakes; captures and validates all task execution at the point of service. Simultaneously Mobideo enables managers to gain situational awareness and real-time visibility into the status of tasks, monitor productivity and ensure better decisions in real-time based on event-driven reporting and predictive analytics.",
       "tags": [
         "mobility",
@@ -1632,16 +1632,15 @@
       "description": "TextLab improves Conversion through Delivering the Right Text to the Right User at the Right Time.  ",
       "tags": [
         "advertising",
-        " marketing",
-        " big-data-analytics",
-        " machine-learning",
-        " social-marketing",
-        " campaign-management",
-        " semantic-analysis",
-        " campaign-optimization",
-        " natural-language-processing",
-        "",
-        " text-analytics"
+        "marketing",
+        "big-data-analytics",
+        "machine-learning",
+        "social-marketing",
+        "campaign-management",
+        "semantic-analysis",
+        "campaign-optimization",
+        "natural-language-processing",
+        "text-analytics"
       ],
       "finder_url": "",
       "homepage": "www.text-lab.co",
@@ -1685,11 +1684,11 @@
       "description": "Convexum is developing a pioneering solution for eliminating the rising threat of uncontrolled or malicious use of commercial drones.",
       "tags": [
         "industrial-technologies",
-        " drones",
-        " privacy-protection security",
-        " public-safety",
-        " homeland-security",
-        " perimeter-security"
+        "drones",
+        "privacy-protection security",
+        "public-safety",
+        "homeland-security",
+        "perimeter-security"
       ],
       "finder_url": "",
       "homepage": "www.convexum-sec.com",
@@ -1775,9 +1774,9 @@
       "description": "Splitty gets the lowest hotel rates for travelers by splitting the same stay into two reservations. Our split and match technology finds the most efficient way to structure your reservation so that you consistently get the cheapest rates without affecting your trip plans.",
       "tags": [
         "booking",
-        " travel",
-        " flights mobile-applications",
-        " search-engine"
+        "travel",
+        "flights mobile-applications",
+        "search-engine"
       ],
       "finder_url": "",
       "homepage": "www.splittytravel.com",
