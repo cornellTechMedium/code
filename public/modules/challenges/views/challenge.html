@@ -19,7 +19,11 @@
           <h3>Challenge:</h3>
           <md-content>{{ challengeItem.companies[0].longDescription }}</md-content>
           <h3>Contact information: </h3>
-          <p>{{ challengeItem.companies[0].contactName }}</p>
+          <p>Position: {{ challengeItem.companies[0].contactPosition }}</p>
+          <p>Name: {{ challengeItem.companies[0].contactName }}</p>
+          <p>Email: <a href="mailto:{{ challengeItem.companies[0].contactEmail }}">{{ challengeItem.companies[0].contactEmail }}</a>
+          </p>
+          <p>Skype: {{ challengeItem.companies[0].contactSkype }}</p>
           <md-chips ng-model="challengeItem.companies[0].company.tags" name="tags" readonly="true">
             <md-chip-template>
               <strong>{{$chip}}</strong>
@@ -33,7 +37,11 @@
           <h3>Challenge:</h3>
           <md-content>{{ challengeItem.companies[1].longDescription }}</md-content>
           <h3>Contact information: </h3>
-          <p>{{ challengeItem.companies[1].contactName }}</p>
+          <p>Position: {{ challengeItem.companies[1].contactPosition }}</p>
+          <p>Name: {{ challengeItem.companies[1].contactName }}</p>
+          <p>Email: <a href="mailto:{{ challengeItem.companies[1].contactEmail }}">{{ challengeItem.companies[1].contactEmail }}</a>
+          </p>
+          <p>Skype: {{ challengeItem.companies[1].contactSkype }}</p>
           <md-chips ng-model="challengeItem.companies[1].company.tags" name="tags" readonly="true">
             <md-chip-template>
               <strong>{{$chip}}</strong>
