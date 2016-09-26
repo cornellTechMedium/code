@@ -27,9 +27,11 @@ angular.module('tabsCtrl', ['tabsService', 'cardsService'])
                     self.challenges.list.forEach(function(challenge) {
                         challenge.companies[FIRST_COMPANY_INDEX]["company"] = self.companies.list[challenge.companies[FIRST_COMPANY_INDEX].id-1];
                         challenge.companies[SECOND_COMPANY_INDEX]["company"] = self.companies.list[challenge.companies[SECOND_COMPANY_INDEX].id-1];
+                        self.companies.list[challenge.companies[FIRST_COMPANY_INDEX].id-1]["challengeId"] = challenge.id;
+                        self.companies.list[challenge.companies[SECOND_COMPANY_INDEX].id-1]["challengeId"] = challenge.id;
                     });
 
-                    console.log(self.challenges.list);
+                    console.log(self.companies);
                 })
                 .error(function(data) {
                     // Error Handling

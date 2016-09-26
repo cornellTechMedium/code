@@ -1,26 +1,3 @@
-<!--<md-content class="md-padding padding-inner">-->
-    <!--<div ng-repeat="cardItem in Cards.cardItems.list">-->
-      <!--<div layout="row" layout-wrap layout-align="start center">-->
-        <!--<md-content layout-padding>-->
-
-          <!--<h3 class="md-title">{{cardItem.name}}</h3>-->
-          <!--<p>{{cardItem.description}}</p>-->
-          <!--<md-divider></md-divider>-->
-          <!--<md-button md-no-ink class="link-button" href="{{cardItem.homepage}}" target="_blank">Company homepage</md-button>-->
-          <!--<md-button elclass="link-button" href="http://{{cardItem.finder_url}}" target="_blank">More information</md-button>-->
-          <!--<div flex="auto">-->
-          <!--<md-chips ng-model="cardItem.tags" name="tags" readonly="true">-->
-            <!--<md-chip-template>-->
-              <!--<strong>{{$chip}}</strong>-->
-            <!--</md-chip-template>-->
-          <!--</md-chips>-->
-        <!--</div>-->
-        <!--</md-content>-->
-        <!--<md-button flex-xs="100" class="md-raised md-primary btn1" href="/cards">Back</md-button>-->
-    <!--</div>-->
-  <!--</div>-->
-<!--</md-content>-->
-
 <div class="padding-inner">
   <div layout="row" layout-wrap layout-align="start center">
     <div flex="100" flex-sm="100" flex-xs="100" ng-repeat="cardItem in Cards.cardItems.list">
@@ -49,6 +26,7 @@
         </md-card-content>
 
         <md-card-actions layout="row" layout-align="end center">
+          <md-button class="md-warn md-raised md-hue-2" href="/tabs/{{ cardItem.challengeId }}"><span class="seeChallengeBtn">See Challenge</span></md-button>
           <md-button href="/cards">Back</md-button>
         </md-card-actions>
       </md-card>
