@@ -32,10 +32,10 @@ router.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
                 title: "Cards"
             }
         })
-        .state('list', {
-            url: '/list',
-            templateUrl: '/modules/list/views/list.html',
-            controller: 'listCtrl',
+        .state('timeline', {
+            url: '/timeline',
+            templateUrl: '/modules/timeline/views/timeline.html',
+            controller: 'timeLineCtrl',
             controllerAs: 'List',
             params: {
                 title: "List"

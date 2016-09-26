@@ -1,5 +1,5 @@
-angular.module('listCtrl', ['listService'])
-.controller('listCtrl', function(List, $stateParams) {
+angular.module('timeLineCtrl', ['timeLineService'])
+.controller('timeLineCtrl', function(List, $stateParams) {
 	
 	self = this;
 

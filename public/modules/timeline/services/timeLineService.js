@@ -1,4 +1,4 @@
-angular.module('listService', [])
+angular.module('timeLineService', [])
 .factory('List', function($http) {
 	
 	var listFactory = {};

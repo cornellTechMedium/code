@@ -6,8 +6,8 @@ var materialApp = angular
     'appCtrl',
     'companiesCtrl',
     'companiesService',
-    'listCtrl',
-    'listService',
+    'timeLineCtrl',
+    'timeLineService',
     'challengesCtrl',
     'challengesService',
     'angularVideoBg'
