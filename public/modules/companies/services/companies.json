@@ -2,7 +2,7 @@
   "list": [
     {
       "id": 1,
-      "image": "./temp-assets/",
+      "image": "./assets/",
       "name": "Eco-Fusion",
       "tag_line": "Mobile Apps for Preventing or Managing Chronic Diseases",
       "description": "Eco-Fusion is a digital therapy company, offering a flexible mobile platform that helps prevent or treats a variety of chronic illnesses, including stress, anxiety, diabetes, obesity, and cardio-vascular diseases.\nUnlike large care management systems that require an IT project to get off the ground, Eco-Fusion requires no more than a smartphone and is effective from day one. Its first product, Serenita, accurately measures and treats stress. It was named \"Best Health App of the Year\" by the Doctors 2.0 organization in June 2015 and has produced significant results in clinical trials on diabetic populations. The platform suits primary and specialty care clinics and payers concerned about escalating treatment cost and low adherence rates.",
@@ -103,7 +103,7 @@
       "num_israeli_acquisitions": "",
       "country": "",
       "$$hashKey": "object:19",
-      "image": "./temp-assets/",
+      "image": "./assets/",
       "challengeId": 4
     },
     {
@@ -155,7 +155,7 @@
       "num_israeli_acquisitions": "",
       "country": "",
       "$$hashKey": "object:20",
-      "image": "./temp-assets/",
+      "image": "./assets/",
       "challengeId": 17
     },
     {
@@ -204,7 +204,7 @@
       "num_israeli_acquisitions": "",
       "country": "",
       "$$hashKey": "object:21",
-      "image": "./temp-assets/",
+      "image": "./assets/",
       "challengeId": 2
     },
     {
@@ -252,7 +252,7 @@
       "num_israeli_acquisitions": "",
       "country": "",
       "$$hashKey": "object:22",
-      "image": "./temp-assets/",
+      "image": "./assets/",
       "challengeId": 1
     },
     {
@@ -301,7 +301,7 @@
       "num_israeli_acquisitions": "",
       "country": "",
       "$$hashKey": "object:23",
-      "image": "./temp-assets/",
+      "image": "./assets/",
       "challengeId": 14
     },
     {
@@ -354,7 +354,7 @@
       "num_israeli_acquisitions": "",
       "country": "",
       "$$hashKey": "object:24",
-      "image": "./temp-assets/",
+      "image": "./assets/",
       "challengeId": 10
     },
     {
@@ -403,7 +403,7 @@
       "num_israeli_acquisitions": "",
       "country": "",
       "$$hashKey": "object:25",
-      "image": "./temp-assets/",
+      "image": "./assets/",
       "challengeId": 1
     },
     {
@@ -454,7 +454,7 @@
       "num_israeli_acquisitions": "",
       "country": "",
       "$$hashKey": "object:26",
-      "image": "./temp-assets/",
+      "image": "./assets/",
       "challengeId": 13
     },
     {
@@ -512,7 +512,7 @@
       "num_israeli_acquisitions": "",
       "country": "",
       "$$hashKey": "object:27",
-      "image": "./temp-assets/",
+      "image": "./assets/",
       "challengeId": 16
     },
     {
@@ -563,7 +563,7 @@
       "num_israeli_acquisitions": "",
       "country": "",
       "$$hashKey": "object:28",
-      "image": "./temp-assets/",
+      "image": "./assets/",
       "challengeId": 5
     },
     {
@@ -611,7 +611,7 @@
       "num_israeli_acquisitions": "",
       "country": "",
       "$$hashKey": "object:29",
-      "image": "./temp-assets/",
+      "image": "./assets/",
       "challengeId": 7
     },
     {
@@ -663,7 +663,7 @@
       "num_israeli_acquisitions": "",
       "country": "",
       "$$hashKey": "object:30",
-      "image": "./temp-assets/",
+      "image": "./assets/",
       "challengeId": 15
     },
     {
@@ -712,7 +712,7 @@
       "num_israeli_acquisitions": "",
       "country": "",
       "$$hashKey": "object:31",
-      "image": "./temp-assets/",
+      "image": "./assets/",
       "challengeId": 8
     },
     {
@@ -760,7 +760,7 @@
       "num_israeli_acquisitions": "",
       "country": "",
       "$$hashKey": "object:32",
-      "image": "./temp-assets/",
+      "image": "./assets/",
       "challengeId": 2
     },
     {
@@ -812,7 +812,7 @@
       "num_israeli_acquisitions": "",
       "country": "",
       "$$hashKey": "object:33",
-      "image": "./temp-assets/",
+      "image": "./assets/",
       "challengeId": 5
     },
     {
@@ -861,7 +861,7 @@
       "num_israeli_acquisitions": "",
       "country": "",
       "$$hashKey": "object:34",
-      "image": "./temp-assets/",
+      "image": "./assets/",
       "challengeId": 8
     },
     {
@@ -910,7 +910,7 @@
       "num_israeli_acquisitions": "",
       "country": "",
       "$$hashKey": "object:35",
-      "image": "./temp-assets/",
+      "image": "./assets/",
       "challengeId": 10
     },
     {
@@ -959,7 +959,7 @@
       "num_israeli_acquisitions": "",
       "country": "",
       "$$hashKey": "object:36",
-      "image": "./temp-assets/",
+      "image": "./assets/",
       "challengeId": 18
     },
     {
@@ -1012,7 +1012,7 @@
       "num_israeli_acquisitions": "",
       "country": "",
       "$$hashKey": "object:37",
-      "image": "./temp-assets/",
+      "image": "./assets/",
       "challengeId": 6
     },
     {
@@ -1070,7 +1070,7 @@
       "num_israeli_acquisitions": "",
       "country": "",
       "$$hashKey": "object:38",
-      "image": "./temp-assets/",
+      "image": "./assets/",
       "challengeId": 3
     },
     {
@@ -1121,7 +1121,7 @@
       "num_israeli_acquisitions": "",
       "country": "",
       "$$hashKey": "object:39",
-      "image": "./temp-assets/",
+      "image": "./assets/",
       "challengeId": 7
     },
     {
@@ -1173,7 +1173,7 @@
       "num_israeli_acquisitions": "",
       "country": "",
       "$$hashKey": "object:40",
-      "image": "./temp-assets/",
+      "image": "./assets/",
       "challengeId": 9
     },
     {
@@ -1222,7 +1222,7 @@
       "num_israeli_acquisitions": "",
       "country": "",
       "$$hashKey": "object:41",
-      "image": "./temp-assets/",
+      "image": "./assets/",
       "challengeId": 12
     },
     {
@@ -1275,7 +1275,7 @@
       "num_israeli_acquisitions": "",
       "country": "",
       "$$hashKey": "object:42",
-      "image": "./temp-assets/",
+      "image": "./assets/",
       "challengeId": 16
     },
     {
@@ -1320,7 +1320,7 @@
       "num_israeli_acquisitions": "",
       "country": "",
       "$$hashKey": "object:43",
-      "image": "./temp-assets/",
+      "image": "./assets/",
       "challengeId": 12
     },
     {
@@ -1366,7 +1366,7 @@
       "num_israeli_acquisitions": "",
       "country": "",
       "$$hashKey": "object:44",
-      "image": "./temp-assets/",
+      "image": "./assets/",
       "challengeId": 15
     },
     {
@@ -1417,7 +1417,7 @@
       "num_israeli_acquisitions": "",
       "country": "",
       "$$hashKey": "object:45",
-      "image": "./temp-assets/",
+      "image": "./assets/",
       "challengeId": 11
     },
     {
@@ -1466,7 +1466,7 @@
       "num_israeli_acquisitions": "",
       "country": "",
       "$$hashKey": "object:46",
-      "image": "./temp-assets/",
+      "image": "./assets/",
       "challengeId": 13
     },
     {
@@ -1518,7 +1518,7 @@
       "num_israeli_acquisitions": "",
       "country": "",
       "$$hashKey": "object:47",
-      "image": "./temp-assets/",
+      "image": "./assets/",
       "challengeId": 3
     },
     {
@@ -1569,7 +1569,7 @@
       "num_israeli_acquisitions": "",
       "country": "",
       "$$hashKey": "object:48",
-      "image": "./temp-assets/",
+      "image": "./assets/",
       "challengeId": 17
     },
     {
@@ -1622,7 +1622,7 @@
       "num_israeli_acquisitions": "",
       "country": "",
       "$$hashKey": "object:49",
-      "image": "./temp-assets/",
+      "image": "./assets/",
       "challengeId": 18
     },
     {
@@ -1674,7 +1674,7 @@
       "num_israeli_acquisitions": "",
       "$$hashKey": "object:50",
       "country": "",
-      "image": "./temp-assets/",
+      "image": "./assets/",
       "challengeId": 9
     },
     {
@@ -1722,7 +1722,7 @@
       "num_israeli_acquisitions": "",
       "$$hashKey": "object:51",
       "country": "",
-      "image": "./temp-assets/",
+      "image": "./assets/",
       "challengeId": 6
     },
     {
@@ -1764,7 +1764,7 @@
       "num_israeli_acquisitions": "",
       "$$hashKey": "object:52",
       "country": "",
-      "image": "./temp-assets/",
+      "image": "./assets/",
       "challengeId": 4
     },
     {
@@ -1810,7 +1810,7 @@
       "num_israeli_acquisitions": "",
       "$$hashKey": "object:53",
       "country": "",
-      "image": "./temp-assets/",
+      "image": "./assets/",
       "challengeId": 14
     }
   ]
