@@ -2,12 +2,12 @@ var FIRST_COMPANY_INDEX = 0;
 var SECOND_COMPANY_INDEX = 1;
 
 angular.module('tabsCtrl', ['tabsService', 'cardsService'])
-.controller('tabsCtrl', function(Tabs, Cards, $stateParams) {
+.controller('tabsCtrl', function(Tabs, Cards, $stateParams, $rootScope) {
 	
 	self = this;
 
-
-
+    self.back = $rootScope.last;
+    
 	// Grab all the items from Tabs Service
     Cards.all()
         .success(function(data) {
@@ -30,8 +30,6 @@ angular.module('tabsCtrl', ['tabsService', 'cardsService'])
                         self.companies.list[challenge.companies[FIRST_COMPANY_INDEX].id-1]["challengeId"] = challenge.id;
                         self.companies.list[challenge.companies[SECOND_COMPANY_INDEX].id-1]["challengeId"] = challenge.id;
                     });
-
-                    console.log(self.companies);
                 })
                 .error(function(data) {
                     // Error Handling
@@ -41,4 +39,6 @@ angular.module('tabsCtrl', ['tabsService', 'cardsService'])
         .error(function(data) {
             // Error Handling
         });
+
+    
 });

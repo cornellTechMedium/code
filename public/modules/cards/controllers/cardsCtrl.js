@@ -1,8 +1,10 @@
 angular.module('cardsCtrl', ['cardsService'])
-.controller('cardsCtrl', function(Cards, $timeout, $q, $log, $stateParams) {
+.controller('cardsCtrl', function(Cards, $timeout, $q, $log, $stateParams, $rootScope) {
 
 	self = this;
 
+    self.back = $rootScope.last;
+    
     self.simulateQuery = false;
     self.isDisabled    = false;
 
@@ -77,8 +79,6 @@ angular.module('cardsCtrl', ['cardsService'])
         // Error Handling
     });
 
-    Cards.goBack = function() {
-        $window.history.back();
-    };
+    
 
 });
