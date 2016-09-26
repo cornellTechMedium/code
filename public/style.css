@@ -163,13 +163,13 @@ md-tabs md-tabs-wrapper {
 .btn1 {
     margin: 6px 8px 6px -2px;
 }
-.img1 {
-    height: 40px;
+.companyImage {
+    height: 200px;
     width: auto;
-    margin: 10px 4px 4px 10px;
+    /*margin: 10px 4px 4px 10px;*/
 }
 .card1 {
-    height: 128px;
+    height: 300px;
 }
 .challengeCard {
     height: auto;
