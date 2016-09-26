@@ -1,16 +1,28 @@
 <div class="padding-inner">
   <div layout="row" layout-wrap layout-align="start center">
-    <div flex="100" flex-sm="50" flex-xs="100" ng-repeat="challengeItem in Tabs.challenges.list">
-      <div layout="row" layout-wrap layout-align="start center">
-        <md-title>Pair #{{ challengeItem.id }}</md-title>
-      </div>
-      <p>{{ Tabs.companies.list[ {{ challengeItem.companies[0].id }} ].name }}</p>
-      <!--<div layout="row" layout-wrap layout-align="start center">-->
-        <!--<p>Company A id: {{ challengeItem.companies[0].id }} </p>-->
-      <!--</div>-->
-      <!--<div layout="row" layout-wrap layout-align="start center">-->
-        <!--<p>Company B id: {{ challengeItem.companies[1].id }} </p>-->
-      <!--</div>-->
+    <div flex="100" flex-sm="100" flex-xs="100" ng-repeat="challengeItem in Tabs.challenges.list">
+      <md-card class="challengeCard" md-whiteframe="{{height}}"
+               ng-init="height = 3" ng-mouseenter="height = 6" ng-mouseleave="height = 3">
+        <!--<img ng-src="{{imagePath}}" class="md-card-image" alt="Washed Out">-->
+        <md-card-title>
+          <md-card-title-text>
+            <h1>Pair #{{ challengeItem.id }}</h1>
+            <span class="md-subhead">{{ challengeItem.companies[0].company.name }} & {{ challengeItem.companies[1].company.name }}</span>
+          </md-card-title-text>
+        </md-card-title>
+        <md-divider/>
+        <md-card-content>
+          <p>{{ challengeItem.companies[0].company.name }}</p>
+          <p>
+            {{ challengeItem.companies[0].shortDescription }}
+          </p>
+          <md-divider/>
+          <p>{{ challengeItem.companies[1].company.name }}</p>
+          <p>
+            {{ challengeItem.companies[1].shortDescription }}
+          </p>
+        </md-card-content>
+      </md-card>
     </div>
   </div>
 

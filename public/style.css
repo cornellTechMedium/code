@@ -171,6 +171,9 @@ md-tabs md-tabs-wrapper {
 .card1 {
     height: 128px;
 }
+.challengeCard {
+    height: auto;
+}
 .search1 {
     margin: 8px;
 }
