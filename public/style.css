@@ -180,6 +180,13 @@ md-tabs md-tabs-wrapper {
 .companyLink {
     text-decoration: none !important;
 }
+.companyInChallengeLink {
+    height: 100%;
+    width: 100%;
+}
+.pairImage {
+    height: 100px;
+}
 .video-container {
     top: 0;
     left: 0;

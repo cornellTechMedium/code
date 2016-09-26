@@ -16,6 +16,10 @@
           <p>
             {{ challengeItem.companies[0].company.tag_line }}
           </p>
+          <h3>Challenge:</h3>
+          <md-content>{{ challengeItem.companies[0].longDescription }}</md-content>
+          <h3>Contact information: </h3>
+          <p>{{ challengeItem.companies[0].contactName }}</p>
           <md-chips ng-model="challengeItem.companies[0].company.tags" name="tags" readonly="true">
             <md-chip-template>
               <strong>{{$chip}}</strong>
@@ -26,6 +30,10 @@
           <p>
             {{ challengeItem.companies[1].company.tag_line }}
           </p>
+          <h3>Challenge:</h3>
+          <md-content>{{ challengeItem.companies[1].longDescription }}</md-content>
+          <h3>Contact information: </h3>
+          <p>{{ challengeItem.companies[1].contactName }}</p>
           <md-chips ng-model="challengeItem.companies[1].company.tags" name="tags" readonly="true">
             <md-chip-template>
               <strong>{{$chip}}</strong>
@@ -34,7 +42,7 @@
         </md-card-content>
 
         <md-card-actions layout="row" layout-align="end center">
-          <md-button href="/tabs/{{ challengeItem.id }}">See Challenge</md-button>
+          <md-button href="/tabs">Back</md-button>
         </md-card-actions>
       </md-card>
     </div>

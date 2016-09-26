@@ -49,6 +49,16 @@ router.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
             params: {
                 title: "Tabs"
             }
+        })
+        .state('tab', {
+            url: '/tabs/{tabId}',
+            templateUrl: '/modules/tabs/views/tab.html',
+            controller: 'tabsCtrl',
+            controllerAs: 'Tabs',
+            params: {
+                title: "Tabs",
+                cardId: "{tabId}"
+            }
         });
 
 

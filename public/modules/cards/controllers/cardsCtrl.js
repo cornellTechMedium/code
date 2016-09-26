@@ -61,7 +61,6 @@ angular.module('cardsCtrl', ['cardsService'])
         // if this is a single company page
         if ($stateParams.cardId != null) {
             data.list = [data.list[$stateParams.cardId-1]];
-            console.log(data.list);
         } else {
             data.list.sort(function(a, b) {
                 return a.name.localeCompare(b.name);
@@ -77,5 +76,9 @@ angular.module('cardsCtrl', ['cardsService'])
     .error(function(data) {
         // Error Handling
     });
+
+    Cards.goBack = function() {
+        $window.history.back();
+    };
 
 });
