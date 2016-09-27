@@ -3,49 +3,34 @@
     <div flex="100" flex-sm="100" flex-xs="100" ng-repeat="challengeItem in Tabs.challenges.list">
       <md-card class="challengeCard" md-whiteframe="{{height}}"
                ng-init="height = 3" ng-mouseenter="height = 6" ng-mouseleave="height = 3">
-        <!--<img ng-src="{{imagePath}}" class="md-card-image" alt="Washed Out">-->
         <md-card-header>
           <md-card-header-text>
             <span class="md-title">#{{ challengeItem.id }}: {{ challengeItem.companies[0].company.name }} & {{ challengeItem.companies[1].company.name }}</span>
           </md-card-header-text>
         </md-card-header>
         <md-divider/>
-        <md-card-content>
-          <img ng-src="{{challengeItem.companies[0].company.image}}{{challengeItem.companies[0].company.id}}.png" class="md-card-image pairImage" alt="">
+
+        <md-card-content ng-repeat="companyChallengeItem in challengeItem.companies">
+          <img ng-src="{{companyChallengeItem.company.image}}{{companyChallengeItem.company.id}}.png" class="md-card-image pairImage" alt="">
           <p>
-            {{ challengeItem.companies[0].company.tag_line }}
+            {{ companyChallengeItem.company.tag_line }}
           </p>
           <h3>Challenge:</h3>
-          <md-content>{{ challengeItem.companies[0].longDescription }}</md-content>
+          <div ng-repeat="paragraphItem in companyChallengeItem.paragraphs track by $index">
+            <p>{{ paragraphItem }}</p>
+          </div>
           <h3>Contact information: </h3>
-          <p>Position: {{ challengeItem.companies[0].contactPosition }}</p>
-          <p>Name: {{ challengeItem.companies[0].contactName }}</p>
-          <p>Email: <a href="mailto:{{ challengeItem.companies[0].contactEmail }}">{{ challengeItem.companies[0].contactEmail }}</a>
+          <p>Position: {{ companyChallengeItem.contactPosition }}</p>
+          <p>Name: {{ companyChallengeItem.contactName }}</p>
+          <p>Email: <a href="mailto:{{ companyChallengeItem.contactEmail }}">{{ companyChallengeItem.contactEmail }}</a>
           </p>
-          <p>Skype: {{ challengeItem.companies[0].contactSkype }}</p>
-          <md-chips ng-model="challengeItem.companies[0].company.tags" name="tags" readonly="true">
+          <p>Skype: {{ companyChallengeItem.contactSkype }}</p>
+          <md-chips ng-model="companyChallengeItem.company.tags" name="tags" readonly="true">
             <md-chip-template>
               <strong>{{$chip}}</strong>
             </md-chip-template>
           </md-chips>
           <md-divider/>
-          <img ng-src="{{challengeItem.companies[1].company.image}}{{challengeItem.companies[1].company.id}}.png" class="md-card-image pairImage" alt="">
-          <p>
-            {{ challengeItem.companies[1].company.tag_line }}
-          </p>
-          <h3>Challenge:</h3>
-          <md-content>{{ challengeItem.companies[1].longDescription }}</md-content>
-          <h3>Contact information: </h3>
-          <p>Position: {{ challengeItem.companies[1].contactPosition }}</p>
-          <p>Name: {{ challengeItem.companies[1].contactName }}</p>
-          <p>Email: <a href="mailto:{{ challengeItem.companies[1].contactEmail }}">{{ challengeItem.companies[1].contactEmail }}</a>
-          </p>
-          <p>Skype: {{ challengeItem.companies[1].contactSkype }}</p>
-          <md-chips ng-model="challengeItem.companies[1].company.tags" name="tags" readonly="true">
-            <md-chip-template>
-              <strong>{{$chip}}</strong>
-            </md-chip-template>
-          </md-chips>
         </md-card-content>
         <md-card-actions layout="row" layout-align="end center">
           <md-button href="{{Tabs.back}}">Back</md-button>
