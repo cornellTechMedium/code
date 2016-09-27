@@ -212,3 +212,7 @@ md-tabs md-tabs-wrapper {
 .seeChallengeBtn {
     color: white;
 }
+.selectChallengesBtn {
+    color: white;
+    margin-top: 16px;
+}
