@@ -13,29 +13,33 @@
         </md-card-header>
         <md-divider/>
         <md-card-content>
-          <div flex="100">
-          <div flex="20">
-            <img ng-src="{{challengeItem.companies[0].company.image}}{{challengeItem.companies[0].company.id}}.png" class="md-card-image pairImage" alt="">
-          </div>
-          <div flex="80">
+          <div layout="row" layout-xs="column" layout-wrap>
+            <div flex="20">
+              <img ng-src="{{challengeItem.companies[0].company.image}}{{challengeItem.companies[0].company.id}}.png" class="md-card-image pairImage" alt="">
+            </div>
+            <div flex="80">
+              <p>
+              {{ challengeItem.companies[0].company.tag_line }}
+            </p>
             <p>
-            {{ challengeItem.companies[0].company.tag_line }}
-          </p>
-          <p>
-            {{ challengeItem.companies[0].company.description}}
-          </p>
-          <md-button md-no-ink class="link-button" href="{{challengeItem.companies[0].company.homepage}}" target="_blank">Company homepage</md-button>
-          <md-button elclass="link-button" href="http://{{challengeItem.companies[0].company.finder_url}}" target="_blank">More information</md-button>
-          <md-chips ng-model="challengeItem.companies[0].company.tags" name="tags" readonly="true">
-            <md-chip-template>
-              <strong>{{$chip}}</strong>
-            </md-chip-template>
-          </md-chips>
-          </div>
+              {{ challengeItem.companies[0].company.description}}
+            </p>
+            <md-button md-no-ink class="link-button" href="{{challengeItem.companies[0].company.homepage}}" target="_blank">Company homepage</md-button>
+            <md-button elclass="link-button" href="http://{{challengeItem.companies[0].company.finder_url}}" target="_blank">More information</md-button>
+            <md-chips ng-model="challengeItem.companies[0].company.tags" name="tags" readonly="true">
+              <md-chip-template>
+                <strong>{{$chip}}</strong>
+              </md-chip-template>
+            </md-chips>
+            </div>
           </div>
           <md-divider/>
-          <img ng-src="{{challengeItem.companies[1].company.image}}{{challengeItem.companies[1].company.id}}.png" class="md-card-image pairImage" alt="">
-          <p>
+          <div layout="row" layout-xs="column" layout-wrap>
+            <div flex="20">
+              <img ng-src="{{challengeItem.companies[1].company.image}}{{challengeItem.companies[1].company.id}}.png" class="md-card-image pairImage" alt="">
+            </div>
+          <div flex="80">
+            <p>
             {{ challengeItem.companies[1].company.tag_line }}
           </p>
           <p>
@@ -48,6 +52,8 @@
               <strong>{{$chip}}</strong>
             </md-chip-template>
           </md-chips>
+            </div>
+            </div>
         </md-card-content>
         <md-card-actions layout="row" layout-align="end center">
           <md-button href="/challenges/{{ challengeItem.id }}">See Challenges</md-button>
