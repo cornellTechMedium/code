@@ -13,26 +13,36 @@
         </md-card-header>
         <md-divider/>
         <md-card-content>
-          <img ng-src="{{challengeItem.companies[0].company.image}}{{challengeItem.companies[0].company.id}}.png" class="md-card-image pairImage" alt="">
-          <p>
+          <div flex="100">
+          <div flex="20">
+            <img ng-src="{{challengeItem.companies[0].company.image}}{{challengeItem.companies[0].company.id}}.png" class="md-card-image pairImage" alt="">
+          </div>
+          <div flex="80">
+            <p>
             {{ challengeItem.companies[0].company.tag_line }}
           </p>
-          <md-card-actions layout="row" layout-align="start center">
-            <md-button href="/companies/{{ challengeItem.companies[0].id }}">See Company</md-button>
-          </md-card-actions>
+          <p>
+            {{ challengeItem.companies[0].company.description}}
+          </p>
+          <md-button md-no-ink class="link-button" href="{{challengeItem.companies[0].company.homepage}}" target="_blank">Company homepage</md-button>
+          <md-button elclass="link-button" href="http://{{challengeItem.companies[0].company.finder_url}}" target="_blank">More information</md-button>
           <md-chips ng-model="challengeItem.companies[0].company.tags" name="tags" readonly="true">
             <md-chip-template>
               <strong>{{$chip}}</strong>
             </md-chip-template>
           </md-chips>
+          </div>
+          </div>
           <md-divider/>
           <img ng-src="{{challengeItem.companies[1].company.image}}{{challengeItem.companies[1].company.id}}.png" class="md-card-image pairImage" alt="">
           <p>
             {{ challengeItem.companies[1].company.tag_line }}
           </p>
-          <md-card-actions layout="row" layout-align="start center">
-            <md-button href="/companies/{{ challengeItem.companies[1].id }}">See Company</md-button>
-          </md-card-actions>
+          <p>
+            {{ challengeItem.companies[1].company.description}}
+          </p>
+          <md-button md-no-ink class="link-button" href="{{challengeItem.companies[1].company.homepage}}" target="_blank">Company homepage</md-button>
+          <md-button elclass="link-button" href="http://{{challengeItem.companies[1].company.finder_url}}" target="_blank">More information</md-button>
           <md-chips ng-model="challengeItem.companies[1].company.tags" name="tags" readonly="true">
             <md-chip-template>
               <strong>{{$chip}}</strong>
