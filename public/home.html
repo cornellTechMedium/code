@@ -1,15 +1,48 @@
 <div class="padding-inner">
+    <md-content layout-padding>
+        <form name="projectForm">
 
-<md-content>
-        <h1>Cornell Tech Medium Challenge! Boom.</h1>
+            <!--<md-input-container class="md-block">-->
+                <!--<label>Description</label>-->
+                <!--<input md-maxlength="30" required md-no-asterisk name="description" ng-model="project.description">-->
+                <!--<div ng-messages="projectForm.description.$error">-->
+                    <!--<div ng-message="required">This is required.</div>-->
+                    <!--<div ng-message="md-maxlength">The description must be less than 30 characters long.</div>-->
+                <!--</div>-->
+            <!--</md-input-container>-->
+
+            <!--<div layout="row">-->
+                <!--<md-input-container flex="50">-->
+                    <!--<label>Client Name</label>-->
+                    <!--<input required name="clientName" ng-model="project.clientName">-->
+                    <!--<div ng-messages="projectForm.clientName.$error">-->
+                        <!--<div ng-message="required">This is required.</div>-->
+                    <!--</div>-->
+                <!--</md-input-container>-->
+
+                <!--<md-input-container flex="50">-->
+                    <!--<label>Project Type</label>-->
+                    <!--<md-select name="type" ng-model="project.type" required>-->
+                        <!--<md-option value="app">Application</md-option>-->
+                        <!--<md-option value="web">Website</md-option>-->
+                    <!--</md-select>-->
+                <!--</md-input-container>-->
+            <!--</div>-->
+
+            <md-input-container class="md-block">
+                <label>Your paragraph</label>
+                <input required type="text" name="text" ng-model="project.name"/>
+
+                <div ng-messages="projectForm.clientEmail.$error" role="alert">
+                    <!--<div ng-message-exp="['required', 'minlength', 'maxlength', 'pattern']">-->
+                        <!--Your text must be between 10 and 100 characters long and look like an e-mail address.-->
+                    <!--</div>-->
+                </div>
+            </md-input-container>
+
+            <div>
+                <md-button type="submit">Submit</md-button>
+            </div>
+        </form>
     </md-content>
-    <!--<video-bg video-id="video.id" start="50" mobile-image="'http://taltourspecials.com/wp-content/uploads/2015/12/TEL-AVIV-ESCAPE-JERUSALEM-695.jpg'"></video-bg>-->
-    <!--<h1 style="color: white;"><b>iTrek 2017</b>, here we go!</h1>-->
-    <!--<h3 style="color: white;"><b>36</b> companies from various industries and different stages reflecting the innovation and entrepreneurship of the <b>Startup Nation</b>.</h3>-->
-
-    <!--<md-button class="md-warn md-raised md-hue-2" href="https://docs.google.com/a/cornell.edu/forms/d/1ncWhph7kw09NghlgAcrmPpruBpyFoS5_Kf0gwVlRduk/edit?usp=sharing_eidp&ts=57ea8bbe" target="_blank">-->
-        <!--<span class="seeChallengeBtn">select your challenges</span>-->
-    <!--</md-button>-->
-    <!--</div>-->
-
 </div>

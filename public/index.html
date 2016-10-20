@@ -2,14 +2,6 @@
 <html lang="en">
 <head>
     <title>Cornell Tech Medium Challenge</title>
-    <meta property="og:title" content="Cornell Tech iTrek 2017"/>
-    <meta property="og:type" content="website"/>
-    <meta property="og:url" content="https://itrek2017.herokuapp.com/"/>
-    <meta property="og:image" content="https://www.johnson.cornell.edu/Portals/32/images/320x%20News%20Hilites/hili-Cornell-Tech-blue-Twist-T-Logo.jpg"/>
-    <meta property="og:site_name" content="iTrek 2017"/>
-    <meta property="fb:admins" content="USER_ID"/>
-    <meta property="og:description"
-          content="Cornell Tech MBA program 2017 Israeli trek website."/>
     <base href="/" />
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,60 +12,29 @@
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/scripts/angular-material/angular-material.min.css"/>
     <link rel="stylesheet" href="style.css"/>
-    <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-        ga('create', 'UA-84317989-1', 'auto');
-        ga('send', 'pageview');
-
-    </script>
 </head>
 <body ng-app="materialApp" layout="row" ng-controller="appCtrl as app">
-<md-sidenav class="md-sidenav-right md-whiteframe-4dp ng-cloak" md-component-id="right">
-    <md-toolbar class="md-toolbar-tools" layout="row" layout-align="space-between-center">
-        <md-button ng-click="app.toggleRight()" class="md-icon-button" aria-label="Close User Menu">
-            <md-icon md-font-icon="fa-bars" class="md-menu-text-color fa s24"></md-icon>
-        </md-button>
-    </md-toolbar>
-    <md-list-item layout="row" ng-click="app.toggleRight()" href="/">
-        <span>Home</span>
-    </md-list-item>
-    <md-divider></md-divider>
-    <md-list-item layout="row" ng-click="app.toggleRight()" href="/companies">
-        <span>Companies</span>
-    </md-list-item>
-    <md-divider></md-divider>
-    <md-list-item layout="row" ng-click="app.toggleRight()" href="/timeline">
-        <span>Timeline</span>
-    </md-list-item>
-    <md-divider></md-divider>
-    <md-list-item layout="row" ng-click="app.toggleRight()" href="/challenges">
-        <span>Challenges</span>
-    </md-list-item>
-</md-sidenav>
+
 <div style="width:100%" class="ng-cloak">
     <md-toolbar class="toolbar" style="position: fixed;">
         <div layout="row" layout-align="center center" layout-wrap class="md-toolbar-tools">
             <h1 class="md-headline navitem1"><a href="/">Cornell Tech Medium Challenge</a></h1>
             <span flex></span>
-            <md-button hide-xs class="md-primary navitem1" href="/companies">
-                Companies
-            </md-button>
-            <md-button hide-xs class="md-primary navitem1" href="/timeline">
-                Timeline
-            </md-button>
-            <md-button hide-xs class="md-primary navitem1" href="/challenges">
-                Challenges
-            </md-button>
-            <md-button hide-md hide-sm hide-xs class="md-icon-button" href="https://github.com/agavish/itrek2017/issues" target="_blank">
-                <md-icon md-svg-icon="assets/github.svg"></md-icon>
-            </md-button>
-            <md-button hide-gt-xs ng-click="app.toggleRight()" class="md-icon-button" aria-label="User Menu">
-                <md-icon md-font-icon="fa-bars" class="md-menu-text-color fa s24"></md-icon>
-            </md-button>
+            <!--<md-button hide-xs class="md-primary navitem1" href="/companies">-->
+                <!--Companies-->
+            <!--</md-button>-->
+            <!--<md-button hide-xs class="md-primary navitem1" href="/timeline">-->
+                <!--Timeline-->
+            <!--</md-button>-->
+            <!--<md-button hide-xs class="md-primary navitem1" href="/challenges">-->
+                <!--Challenges-->
+            <!--</md-button>-->
+            <!--<md-button hide-md hide-sm hide-xs class="md-icon-button" href="https://github.com/agavish/itrek2017/issues" target="_blank">-->
+                <!--<md-icon md-svg-icon="assets/github.svg"></md-icon>-->
+            <!--</md-button>-->
+            <!--<md-button hide-gt-xs ng-click="app.toggleRight()" class="md-icon-button" aria-label="User Menu">-->
+                <!--<md-icon md-font-icon="fa-bars" class="md-menu-text-color fa s24"></md-icon>-->
+            <!--</md-button>-->
         </div>
     </md-toolbar>
     <div style="height: 100%;" ui-view></div>
