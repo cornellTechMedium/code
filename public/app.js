@@ -16,9 +16,3 @@ var materialApp = angular
     .primaryPalette('blue')
     .accentPalette('pink');
 });
-
-angular.module('materialApp').controller('VideoCtrl', function($scope) {
-    $scope.video = {
-        id: 'tIWgUGtZzwI'
-    };
-});
