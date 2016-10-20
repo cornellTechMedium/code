@@ -8,12 +8,18 @@
   },
   "license": "MIT",
   "dependencies": {
+    "@google-cloud/language": "^0.4.0",
     "angular": "^1.5.7",
     "angular-animate": "^1.5.7",
     "angular-aria": "^1.5.7",
     "angular-material": "^1.1.0-rc.5",
     "angular-ui-router": "^0.3.1",
+    "bluebird": "^3.4.6",
+    "body-parser": "^1.15.2",
     "express": "^4.13.3",
+    "google": "^2.1.0",
+    "google-images": "^2.0.0",
+    "lodash": "^4.16.4",
     "newrelic": "^1.30.3"
   },
   "devDependencies": {
