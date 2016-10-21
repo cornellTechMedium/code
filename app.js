@@ -10,7 +10,25 @@ var express = require('express'),
         projectId: "medium-146413",
         keyFilename: "/Users/adamgavish/Development/medium/config/auth.json"
     }),
-    bodyParser = require('body-parser');
+    bodyParser = require('body-parser'),
+    YouTube = require('youtube-node'),
+    Twitter = require('node-twitter'),
+    googleapi = require('googleapis');
+
+// Google knowledge graph
+var kgsearchapi = googleapi.kgsearch('v1');
+
+// Google Youtube
+var youTube = new YouTube();
+youTube.setKey('IzaSyDK-lenDCs83cEvFTknrvpINEHnZCSOcIg');
+
+// Twitter search
+var twitterSearchClient = new Twitter.SearchClient(
+    'wbD14ZNvLlj78jEu0iRp1Nfgv',
+    'bHWhrnK1nrSu5Mctbfj8rMLlUxumkopEmm2LrtT4JISKKHnpGj',
+    '47969995-GLbixhkzUvYzcaGFMT9YAf3Uvmj8ZbQ36wRKgC9Eq',
+    'Vc2IvRYGzMetg1M91rVtM1QGFHVvbHt6E8zumMLkD0tfE'
+);
 
 app.use(bodyParser.urlencoded());
 app.use(bodyParser.json());
@@ -88,9 +106,54 @@ var searchGoogle = function (entity) {
 var searchGoogleImages = function (entity) {
     return new Promise(function (resolve, reject) {
         client.search(entity.name)
-            .then(function (data) {
-                entity["images"] = data;
+            .then(function(data) {
+                entity["googleImages"] = data;
                 resolve(entity);
             });
+    });
+};
+
+var searchYoutube = function(entity) {
+    return new Promise(function(resolve, reject) {
+        youTube.search(entity.name, 1, function(error, result) {
+            // console.log(JSON.stringify(result, null, 2));
+            entity["youtube"] = result;
+            resolve(entity);
+        });
+    });
+};
+
+var searchTwitter = function(entity) {
+    return new Promise(function(resolve, reject) {
+        twitterSearchClient.search({
+            'q': '"' + entity.name + '"'
+        }, function(error, result) {
+            if (error) {
+                console.log('Error: ' + (error.code ? error.code + ' ' + error.message : error.message));
+            }
+            if (result) {
+                // console.log(result);
+                entity["tweets"] = result;
+                resolve(entity);
+            }
+        });
+    });
+};
+
+var searchWiki = function(entity) {
+    return new Promise(function(resolve, reject) {
+        var params = {
+            auth: 'IzaSyDK-lenDCs83cEvFTknrvpINEHnZCSOcIg',
+            query: entity.name
+        };
+        kgsearchapi.entities.search(params, function(err, response) {
+            if (err) {
+                console.log('Encountered error', err);
+            } else {
+                // console.log(JSON.stringify(response, null, 2));
+                entity["wikipedia"] = response;
+                resolve(entity);
+            }
+        });
     });
 };
