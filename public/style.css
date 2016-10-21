@@ -228,7 +228,8 @@ md-tabs md-tabs-wrapper {
     background-color: #BCD6FE;
 }
 .image-responsive {
-    max-height: 150px;
+    max-height: 100%;
+    max-width: 100%;
 }
 .md-grid-list {
     margin: 8px; }
