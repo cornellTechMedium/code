@@ -24,7 +24,7 @@ router.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
             }
         })
         .state('companies', {
-            url: '/companies',
+            url: '/submit',
             templateUrl: '/modules/companies/views/companies.html',
             controller: 'companiesCtrl',
             controllerAs: 'Cards',

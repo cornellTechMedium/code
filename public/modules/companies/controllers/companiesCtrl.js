@@ -1,5 +1,5 @@
 angular.module('companiesCtrl', ['companiesService'])
-.controller('companiesCtrl', function(Cards, $timeout, $q, $log, $stateParams, $rootScope) {
+.controller('companiesCtrl', function(Cards, $scope, $timeout, $q, $log, $stateParams, $rootScope) {
 
 	self = this;
 
@@ -13,6 +13,10 @@ angular.module('companiesCtrl', ['companiesService'])
     self.searchTextChange   = searchTextChange;
 
     self.newCompany = newCompany;
+
+    $scope.update = function(user) {
+        console.log(user);
+    };
 
     function newCompany(company) {
         alert("Sorry! Company " + company + " does not participate in iTrek 2017!");
@@ -57,27 +61,27 @@ angular.module('companiesCtrl', ['companiesService'])
     }
 
 	// Grab all the items from Cards Service
-	Cards.all()
-    .success(function(data) {
-
-        // if this is a single company page
-        if ($stateParams.cardId != null) {
-            data.list = [data.list[$stateParams.cardId-1]];
-        } else {
-            data.list.sort(function(a, b) {
-                return a.name.localeCompare(b.name);
-            });
-
-            self.companiesSearchMap = data.list.map(function(company) {
-                return company;
-            });
-        }
-
-        self.cardItems = data;
-    })
-    .error(function(data) {
-        // Error Handling
-    });
+	// Cards.all()
+    // .success(function(data) {
+    //
+     //    // if this is a single company page
+     //    if ($stateParams.cardId != null) {
+     //        data.list = [data.list[$stateParams.cardId-1]];
+     //    } else {
+     //        data.list.sort(function(a, b) {
+     //            return a.name.localeCompare(b.name);
+     //        });
+    //
+     //        self.companiesSearchMap = data.list.map(function(company) {
+     //            return company;
+     //        });
+     //    }
+    //
+     //    self.cardItems = data;
+    // })
+    // .error(function(data) {
+     //    // Error Handling
+    // });
 
     
 

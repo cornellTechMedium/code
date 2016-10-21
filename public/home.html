@@ -1,48 +1,21 @@
 <div class="padding-inner">
     <md-content layout-padding>
-        <form name="projectForm">
+        <div data-ng-controller="companiesCtrl" flex layout="row" layout-align="center center">
+            <div flex-sm="100" flex-gt-sm="90" flex-gt-md="70" flex-gt-lg="50" class="md-whiteframe-z2">
+                <md-content class="md-padding">
+                    <div flex>
+                        <form name="contactForm">
+                            <md-input-container>
+                                <label>Paragraph:</label>
+                                <textarea ng-model="user.contactMsg" columns="200" md-maxlength="150" required></textarea>
+                            </md-input-container>
 
-            <!--<md-input-container class="md-block">-->
-                <!--<label>Description</label>-->
-                <!--<input md-maxlength="30" required md-no-asterisk name="description" ng-model="project.description">-->
-                <!--<div ng-messages="projectForm.description.$error">-->
-                    <!--<div ng-message="required">This is required.</div>-->
-                    <!--<div ng-message="md-maxlength">The description must be less than 30 characters long.</div>-->
-                <!--</div>-->
-            <!--</md-input-container>-->
-
-            <!--<div layout="row">-->
-                <!--<md-input-container flex="50">-->
-                    <!--<label>Client Name</label>-->
-                    <!--<input required name="clientName" ng-model="project.clientName">-->
-                    <!--<div ng-messages="projectForm.clientName.$error">-->
-                        <!--<div ng-message="required">This is required.</div>-->
-                    <!--</div>-->
-                <!--</md-input-container>-->
-
-                <!--<md-input-container flex="50">-->
-                    <!--<label>Project Type</label>-->
-                    <!--<md-select name="type" ng-model="project.type" required>-->
-                        <!--<md-option value="app">Application</md-option>-->
-                        <!--<md-option value="web">Website</md-option>-->
-                    <!--</md-select>-->
-                <!--</md-input-container>-->
-            <!--</div>-->
-
-            <md-input-container class="md-block">
-                <label>Your paragraph</label>
-                <input required type="text" name="text" ng-model="project.name"/>
-
-                <div ng-messages="projectForm.clientEmail.$error" role="alert">
-                    <!--<div ng-message-exp="['required', 'minlength', 'maxlength', 'pattern']">-->
-                        <!--Your text must be between 10 and 100 characters long and look like an e-mail address.-->
-                    <!--</div>-->
-                </div>
-            </md-input-container>
-
-            <div>
-                <md-button type="submit">Submit</md-button>
+                            <md-button type="submit" class="md-raised md-primary"
+                                       aria-label="Save Project" ng-click="update(user)" href="/companies">Send</md-button>
+                        </form>
+                    </div>
+                </md-content>
             </div>
-        </form>
+        </div>
     </md-content>
 </div>
