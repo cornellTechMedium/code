@@ -1,4 +1,6 @@
 // require('newrelic');
+var googleAPIKey = 'AIzaSyDK-lenDCs83cEvFTknrvpINEHnZCSOcIg';
+
 var express = require('express'),
     app = express(),
     google = require('google'),
@@ -14,13 +16,23 @@ var express = require('express'),
     YouTube = require('youtube-node'),
     Twitter = require('node-twitter'),
     googleapi = require('googleapis');
+    // GoogleMapsAPI = require('googlemaps');
+
+// Google Map Static
+var publicConfig = {
+    key: googleAPIKey,
+    stagger_time: 1000, // for elevationPath
+    encode_polylines: false,
+    secure: true, // use https
+};
+// var gmAPI = new GoogleMapsAPI(publicConfig);
 
 // Google knowledge graph
 var kgsearchapi = googleapi.kgsearch('v1');
 
 // Google Youtube
 var youTube = new YouTube();
-youTube.setKey('AIzaSyDK-lenDCs83cEvFTknrvpINEHnZCSOcIg');
+youTube.setKey(googleAPIKey);
 
 // Twitter search
 var twitterSearchClient = new Twitter.SearchClient(
@@ -38,11 +50,11 @@ app.use('/scripts', express.static(__dirname + '/node_modules/'));
 
 app.use(express.static(__dirname + '/public'));
 
-app.listen(app.get('port'), function () {
+app.listen(app.get('port'), function() {
     console.log('Node app is running on port', app.get('port'));
 });
 
-app.post('/detect', function (req, res) {
+app.post('/detect', function(req, res) {
 
     var paragraph = req.body.text;
 
@@ -50,35 +62,36 @@ app.post('/detect', function (req, res) {
         verbose: true
     };
 
-    return new Promise(function (resolve, reject) {
-        language.detectEntities(paragraph, options, function (err, data) {
-            if (err) {
-                reject(err);
-            } else {
-                var arr = [];
-                for (var property in data) {
-                    if (data.hasOwnProperty(property)) {
-                        arr.push(data[property]);
+    return new Promise(function(resolve, reject) {
+            language.detectEntities(paragraph, options, function(err, data) {
+                if (err) {
+                    reject(err);
+                } else {
+                    var arr = [];
+                    for (var property in data) {
+                        if (data.hasOwnProperty(property)) {
+                            arr.push(data[property]);
+                        }
                     }
+                    var results = _.flattenDeep(arr);
+                    resolve(results);
                 }
-                var results = _.flattenDeep(arr);
-                resolve(results);
-            }
-        });
-    })
-        .then(function (entities) {
+            });
+        })
+        .then(function(entities) {
             var promises = [];
 
-            _.forEach(entities, function (entity) {
-                promises.push(searchGoogleImages(entity));
-                promises.push(searchYoutube(entity));
-                promises.push(searchWiki(entity));
+            _.forEach(entities, function(entity) {
                 promises.push(searchGoogle(entity));
+                promises.push(searchGoogleImages(entity));
+                promises.push(searchWiki(entity));
                 // promises.push(searchTwitter(entity));
+                promises.push(searchYoutube(entity));
+                // promises.push(getMap(entity));
             });
             Promise
                 .all(promises)
-                .then(function () {
+                .then(function() {
                     var result = {};
                     result.entities = entities;
                     result.hashmap = _.keyBy(entities, 'name');
@@ -86,17 +99,19 @@ app.post('/detect', function (req, res) {
                     // });
                 })
         })
-        .catch(function (err) {
+        .catch(function(err) {
             console.log('ERR', err);
         });
 });
 
-app.get('/', function (req, res) {
+app.get('/', function(req, res) {
     res.send('iTrek 2017!');
 });
 
-app.get('/*', function (req, res, next) {
-    res.sendFile('index.html', {root: __dirname + '/public'});
+app.get('/*', function(req, res, next) {
+    res.sendFile('index.html', {
+        root: __dirname + '/public'
+    });
 });
 
 var searchGoogle = function(entity) {
@@ -147,7 +162,7 @@ var searchTwitter = function(entity) {
 var searchWiki = function(entity) {
     return new Promise(function(resolve, reject) {
         var params = {
-            auth: 'AIzaSyDK-lenDCs83cEvFTknrvpINEHnZCSOcIg',
+            auth: googleAPIKey,
             query: entity.name
         };
         kgsearchapi.entities.search(params, function(err, response) {
@@ -160,3 +175,18 @@ var searchWiki = function(entity) {
         });
     });
 };
+
+// var getMap = function(entity) {
+//     if (entity.type == 'LOCATION') {
+//         return new Promise(function(resolve, reject) {
+//             var params = {
+//                 center: entity.name,
+//                 zoom: 0,
+//                 size: '800x400',
+//                 maptype: 'roadmap'
+//             }
+//             entity['mapImage'] = gmAPI.staticMap(params).replace('zoom=', '');
+//             resolve(entity);
+//         });
+//     }
+// };
