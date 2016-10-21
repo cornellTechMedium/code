@@ -2,7 +2,7 @@ var FIRST_COMPANY_INDEX = 0;
 var SECOND_COMPANY_INDEX = 1;
 
 angular.module('challengesCtrl', ['challengesService', 'companiesService'])
-.controller('challengesCtrl', function(Tabs, Cards, $http, $sce, $scope, $stateParams, $rootScope) {
+.controller('challengesCtrl', function(Tabs, Cards, $compile, $http, $sce, $scope, $stateParams, $rootScope) {
 	
 	self = this;
 
@@ -11,6 +11,9 @@ angular.module('challengesCtrl', ['challengesService', 'companiesService'])
 
     $scope.result = '<p>' + $rootScope.request.text + '</p>';
 
+    $scope.openTooltip = function(event) {
+      console.log(event);
+    };
     $http.post('http://localhost:5000/detect', $rootScope.request)
         .success(function(data) {
             // $rootScope.user = $rootScope.request.text;
@@ -27,6 +30,9 @@ angular.module('challengesCtrl', ['challengesService', 'companiesService'])
                     $scope.result = output;
                 }
             });
+
+            $compile($scope.result)($scope);
+
         })
         .error(function(data) {
             console.log('Error: ' + data);
@@ -36,8 +42,5 @@ angular.module('challengesCtrl', ['challengesService', 'companiesService'])
         return $sce.trustAsHtml(htmlCode);
     };
 
-    $scope.openTooltip = function(event) {
-        console.log(event);
-        $(event.target).addClass('active');
-    }
+
 });

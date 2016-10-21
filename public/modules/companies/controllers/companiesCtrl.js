@@ -14,7 +14,7 @@ angular.module('companiesCtrl', ['companiesService'])
 
 
         var request = {
-            "text" : user.contactMsg
+            "text" : user.contactMsg.toString()
         };
 
         $rootScope.request = request;
