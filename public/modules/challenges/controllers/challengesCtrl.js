@@ -4,9 +4,6 @@ module.controller('challengesCtrl', function(Tabs, Cards, $compile, $http, $sce,
 	
 	self = this;
 
-
-    // self.data = [$rootScope.data];
-
     $scope.result = '<p>' + $rootScope.request.text + '</p>';
 
     $scope.openTooltip = function(event) {
@@ -32,15 +29,16 @@ module.controller('challengesCtrl', function(Tabs, Cards, $compile, $http, $sce,
 
         $scope.youtube = '<md-title>YouTube</md-title><p>';
 
-        $scope.youtube += '<iframe width="420" height="315" src="https://www.youtube.com/embed/' +
-            entity.youtube.items[0].id.videoId + '"</iframe>';
+        entity.youtube.items.forEach(function(item) {
+            $scope.youtube += '<iframe width="420" height="315" src="https://www.youtube.com/embed/' +
+                item.id.videoId + '"</iframe>';
+        });
+
     };
     $http.post('http://localhost:5000/detect', $rootScope.request)
         .success(function(data) {
-            // $rootScope.user = $rootScope.request.text;
-            // $rootScope.data = data;
             $scope.data = data;
-            // console.log('THIS IS THE DATA IN challengesCtrl', $rootScope.data);
+
             data.entities.forEach(function(entity) {
                 var index = $scope.result.indexOf(entity.name);
 
@@ -51,9 +49,6 @@ module.controller('challengesCtrl', function(Tabs, Cards, $compile, $http, $sce,
                     $scope.result = output;
                 }
             });
-
-            // $compile($scope.result)($scope);
-
         })
         .error(function(data) {
             console.log('Error: ' + data);
