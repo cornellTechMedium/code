@@ -5,7 +5,7 @@ var express = require('express'),
     ImagesClient = require('google-images'),
     _ = require('lodash'),
     Promise = require("bluebird"),
-    client = new ImagesClient('006472375744838889227:wgcx2gvcnys', 'AIzaSyB86QS2VTZDWSSyo5qEadjJnvp_SO3L14o'),
+    client = new ImagesClient('006472375744838889227:wgcx2gvcnys', 'IzaSyB86QS2VTZDWSSyo5qEadjJnvp_SO3L14o'),
     language = require('@google-cloud/language')({
         projectId: "medium-146413",
         keyFilename: "/Users/Zephyr/Desktop/Sprint2/key.json"
@@ -20,7 +20,7 @@ var kgsearchapi = googleapi.kgsearch('v1');
 
 // Google Youtube
 var youTube = new YouTube();
-youTube.setKey('AIzaSyDK-lenDCs83cEvFTknrvpINEHnZCSOcIg');
+youTube.setKey('IzaSyDK-lenDCs83cEvFTknrvpINEHnZCSOcIg');
 
 // Twitter search
 var twitterSearchClient = new Twitter.SearchClient(
@@ -149,7 +149,7 @@ var searchTwitter = function(entity) {
 var searchWiki = function(entity) {
     return new Promise(function(resolve, reject) {
         var params = {
-            auth: 'AIzaSyDK-lenDCs83cEvFTknrvpINEHnZCSOcIg',
+            auth: 'IzaSyDK-lenDCs83cEvFTknrvpINEHnZCSOcIg',
             query: entity.name
         };
         kgsearchapi.entities.search(params, function(err, response) {
