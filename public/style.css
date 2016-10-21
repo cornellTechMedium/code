@@ -11,6 +11,11 @@ h1,h2,h3,h4,h5,h6 {
 }
 /* Overwrite Defaults */
 
+.md-toolbar-tools.layout-wrap.layout-align-center-center.layout-row {
+    border-bottom: solid 1px rgba(0, 0, 0, 0.09);
+}
+
+
 form.ng-pristine.ng-invalid.ng-invalid-required {
     display: table-caption;
 }
@@ -259,4 +264,10 @@ md-button {
 md-input-container.md-default-theme label,
 md-input-container.md-default-theme .md-placeholder{
     color:grey !important;
+}
+md-input-container .md-input {
+    border-color: white;
+}
+md-input-container:not(.md-input-invalid).md-input-focused .md-input {
+    border-color: white;
 }
