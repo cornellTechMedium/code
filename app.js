@@ -71,6 +71,10 @@ app.post('/detect', function (req, res) {
 
             _.forEach(entities, function (entity) {
                 promises.push(searchGoogleImages(entity));
+                promises.push(searchYoutube(entity));
+                promises.push(searchWiki(entity));
+                promises.push(searchGoogle(entity));
+                // promises.push(searchTwitter(entity));
             });
             Promise
                 .all(promises)
@@ -143,7 +147,7 @@ var searchTwitter = function(entity) {
 var searchWiki = function(entity) {
     return new Promise(function(resolve, reject) {
         var params = {
-            auth: 'IzaSyDK-lenDCs83cEvFTknrvpINEHnZCSOcIg',
+            auth: 'AIzaSyDK-lenDCs83cEvFTknrvpINEHnZCSOcIg',
             query: entity.name
         };
         kgsearchapi.entities.search(params, function(err, response) {

@@ -10,6 +10,14 @@ h1,h2,h3,h4,h5,h6 {
     padding: 60px 5%;
 }
 /* Overwrite Defaults */
+
+form.ng-pristine.ng-invalid.ng-invalid-required {
+    display: table-caption;
+}
+
+
+
+
 md-toolbar.toolbar h1, md-toolbar.md-toolbar-tools h3, md-tabs md-tabs-wrapper md-tab-item span, md-tabs md-tabs-wrapper md-icon, .md-primary span {
     color: white;
 }
@@ -218,4 +226,15 @@ md-tabs md-tabs-wrapper {
 }
 .highlight {
     background-color: yellow;
+}
+.image-responsive {
+    max-height: 150px;
+}
+.md-grid-list {
+    margin: 8px; }
+
+.md-grid-tile {
+    transition: all 400ms ease-out 50ms; }
+.ourForm {
+    widht: 100%;
 }
