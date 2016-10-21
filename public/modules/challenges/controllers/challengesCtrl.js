@@ -21,7 +21,7 @@ angular.module('challengesCtrl', ['challengesService', 'companiesService'])
                 var index = $scope.result.indexOf(entity.name);
 
                 if (index != -1) {
-                    var output = $scope.result.substr(0, index) + '<span class="highlight">' +
+                    var output = $scope.result.substr(0, index) + '<span class="highlight" ng-click="openTooltip($event)">' +
                         $scope.result.substr(index, entity.name.length) + '</span>' + $scope.result.substr(index + entity.name.length);
 
                     $scope.result = output;
@@ -34,5 +34,10 @@ angular.module('challengesCtrl', ['challengesService', 'companiesService'])
 
     $scope.renderHtml = function (htmlCode) {
         return $sce.trustAsHtml(htmlCode);
-    };
+    };.
+
+    $scope.openTooltip = function(event) {
+        console.log(event);
+        $(event.target).addClass('active');
+    }
 });

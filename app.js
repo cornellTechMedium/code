@@ -56,18 +56,21 @@ app.post('/detect', function (req, res) {
             if (err) {
                 reject(err);
             } else {
-                console.log(data);
-                var results = _.flattenDeep([data.people, data.places, data.organizations]);
+                var arr = [];
+                for (var property in data) {
+                    if (data.hasOwnProperty(property)) {
+                        arr.push(data[property]);
+                    }
+                }
+                var results = _.flattenDeep(arr);
                 resolve(results);
             }
         });
     })
         .then(function (entities) {
             var promises = [];
-            // var entities = _.flattenDeep([data.entities.people, data.entities.places, data.entities.organizations]);
 
             _.forEach(entities, function (entity) {
-                // promises.push(searchGoogle(entity));
                 promises.push(searchGoogleImages(entity));
             });
             Promise
