@@ -34,7 +34,7 @@ angular.module('challengesCtrl', ['challengesService', 'companiesService'])
 
     $scope.renderHtml = function (htmlCode) {
         return $sce.trustAsHtml(htmlCode);
-    };.
+    };
 
     $scope.openTooltip = function(event) {
         console.log(event);

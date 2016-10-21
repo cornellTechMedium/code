@@ -20,7 +20,7 @@ var kgsearchapi = googleapi.kgsearch('v1');
 
 // Google Youtube
 var youTube = new YouTube();
-youTube.setKey('IzaSyDK-lenDCs83cEvFTknrvpINEHnZCSOcIg');
+youTube.setKey('AIzaSyDK-lenDCs83cEvFTknrvpINEHnZCSOcIg');
 
 // Twitter search
 var twitterSearchClient = new Twitter.SearchClient(
@@ -32,7 +32,6 @@ var twitterSearchClient = new Twitter.SearchClient(
 
 app.use(bodyParser.urlencoded());
 app.use(bodyParser.json());
-
 app.set('port', (process.env.PORT || 5000));
 
 app.use('/scripts', express.static(__dirname + '/node_modules/'));
@@ -96,18 +95,17 @@ app.get('/*', function (req, res, next) {
     res.sendFile('index.html', {root: __dirname + '/public'});
 });
 
-var searchGoogle = function (entity) {
-    return new Promise(function (resolve, reject) {
-
-        google(entity.name, 1, function (err, data) {
-            entity["link"] = data;
+var searchGoogle = function(entity) {
+    return new Promise(function(resolve, reject) {
+        google(entity.name, 1, function(err, data) {
+            entity["googleSearch"] = data;
             resolve(entity);
         });
     });
 };
 
-var searchGoogleImages = function (entity) {
-    return new Promise(function (resolve, reject) {
+var searchGoogleImages = function(entity) {
+    return new Promise(function(resolve, reject) {
         client.search(entity.name)
             .then(function(data) {
                 entity["googleImages"] = data;
@@ -119,7 +117,6 @@ var searchGoogleImages = function (entity) {
 var searchYoutube = function(entity) {
     return new Promise(function(resolve, reject) {
         youTube.search(entity.name, 1, function(error, result) {
-            // console.log(JSON.stringify(result, null, 2));
             entity["youtube"] = result;
             resolve(entity);
         });
@@ -151,9 +148,8 @@ var searchWiki = function(entity) {
         };
         kgsearchapi.entities.search(params, function(err, response) {
             if (err) {
-                console.log('Encountered error', err);
+                console.log('Error: ', err);
             } else {
-                // console.log(JSON.stringify(response, null, 2));
                 entity["wikipedia"] = response;
                 resolve(entity);
             }
