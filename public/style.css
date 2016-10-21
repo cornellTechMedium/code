@@ -216,3 +216,6 @@ md-tabs md-tabs-wrapper {
     color: white;
     margin-top: 16px;
 }
+.highlight {
+    background-color: yellow;
+}

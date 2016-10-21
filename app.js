@@ -27,10 +27,8 @@ app.listen(app.get('port'), function () {
 
 app.post('/detect', function (req, res) {
 
-    console.log(req.body);
     var paragraph = req.body.text;
 
-    console.log(req.body);
     var options = {
         verbose: true
     };
@@ -40,6 +38,7 @@ app.post('/detect', function (req, res) {
             if (err) {
                 reject(err);
             } else {
+                console.log(data);
                 var results = _.flattenDeep([data.people, data.places, data.organizations]);
                 resolve(results);
             }
@@ -47,6 +46,8 @@ app.post('/detect', function (req, res) {
     })
         .then(function (entities) {
             var promises = [];
+            // var entities = _.flattenDeep([data.entities.people, data.entities.places, data.entities.organizations]);
+
             _.forEach(entities, function (entity) {
                 // promises.push(searchGoogle(entity));
                 promises.push(searchGoogleImages(entity));
@@ -54,7 +55,10 @@ app.post('/detect', function (req, res) {
             Promise
                 .all(promises)
                 .then(function () {
-                    res.send(entities);
+                    var result = {};
+                    result.entities = entities;
+                    result.hashmap = _.keyBy(entities, 'name');
+                    res.send(result);
                     // });
                 })
         })
@@ -75,7 +79,6 @@ var searchGoogle = function (entity) {
     return new Promise(function (resolve, reject) {
 
         google(entity.name, 1, function (err, data) {
-            console.log(data);
             entity["link"] = data;
             resolve(entity);
         });
@@ -86,7 +89,6 @@ var searchGoogleImages = function (entity) {
     return new Promise(function (resolve, reject) {
         client.search(entity.name)
             .then(function (data) {
-                console.log(data);
                 entity["images"] = data;
                 resolve(entity);
             });
