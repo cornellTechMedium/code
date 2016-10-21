@@ -24,7 +24,7 @@ router.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
             }
         })
         .state('companies', {
-            url: '/submit',
+            url: '/companies',
             templateUrl: '/modules/companies/views/companies.html',
             controller: 'companiesCtrl',
             controllerAs: 'Cards',
@@ -42,7 +42,7 @@ router.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
             }
         })
         .state('challenges', {
-            url: '/challenges',
+            url: '/submit',
             templateUrl: '/modules/challenges/views/challenges.html',
             controller: 'challengesCtrl',
             controllerAs: 'Tabs',
