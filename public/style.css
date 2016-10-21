@@ -14,22 +14,6 @@ h1,h2,h3,h4,h5,h6 {
 form.ng-pristine.ng-invalid.ng-invalid-required {
     display: table-caption;
 }
-
-
-
-
-md-toolbar.toolbar h1, md-toolbar.md-toolbar-tools h3, md-tabs md-tabs-wrapper md-tab-item span, md-tabs md-tabs-wrapper md-icon, .md-primary span {
-    color: white;
-}
-.md-icon-button {
-    font-size: 20px;
-}
-md-tabs md-tabs-wrapper {
-    background: #2196F3;
-}
-.md-button {
-    padding: 0 12px;
-}
 .timeline {
     list-style: none;
     padding: 20px 0 20px;
@@ -238,4 +222,41 @@ md-tabs md-tabs-wrapper {
     transition: all 400ms ease-out 50ms; }
 .ourForm {
     widht: 100%;
+}
+.medium_title h1 {
+    float: left;
+    margin-left: 20px;
+    font-size: 15px;
+}
+.medium_share h1 {
+    text-align: right;
+    float: right;
+    font-size: 15px;
+}
+.medium_publish h1 {
+    text-align: left;
+    float: left;
+    margin-left: 15px;
+    font-size: 15px;
+    color: #3cb371;
+}
+/* Overwrite Defaults */
+md-toolbar.toolbar h1, md-toolbar.md-toolbar-tools h3, md-tabs md-tabs-wrapper md-tab-item span, md-tabs md-tabs-wrapper md-icon, .md-primary span {
+    color: gray;
+}
+md-toolbar.toolbar {
+    background-color: white;
+}
+md-icon-button {
+    font-size: 20px;
+}
+md-tabs md-tabs-wrapper {
+    background: #3cb371;
+}
+md-button {
+    padding: 0 12px;
+}
+md-input-container.md-default-theme label,
+md-input-container.md-default-theme .md-placeholder{
+    color:grey !important;
 }
