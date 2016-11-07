@@ -1,22 +1,21 @@
-// require('newrelic');
-var googleAPIKey = 'AIzaSyDK-lenDCs83cEvFTknrvpINEHnZCSOcIg';
-
 var express = require('express'),
     app = express(),
     google = require('google'),
     ImagesClient = require('google-images'),
     _ = require('lodash'),
     Promise = require("bluebird"),
-    client = new ImagesClient('006472375744838889227:wgcx2gvcnys', 'AIzaSyB86QS2VTZDWSSyo5qEadjJnvp_SO3L14o'),
-    language = require('@google-cloud/language')({
-        projectId: "medium-146413",
-        keyFilename: "/Users/adamgavish/Development/medium/config/auth.json"
-    }),
+    client = new ImagesClient('006472375744838889227:wgcx2gvcnys', process.env.GOOGLE_IMAGES_KEY),
     bodyParser = require('body-parser'),
     YouTube = require('youtube-node'),
     Twitter = require('node-twitter'),
-    googleapi = require('googleapis');
-    // GoogleMapsAPI = require('googlemaps');
+    googleapi = require('googleapis'),
+    watson = require('watson-developer-cloud'),
+    googleAPIKey = process.env.GOOGLE_API_KEY,
+    alchemy_language = watson.alchemy_language({
+        "url": process.env.IBM_URL,
+        "apikey": process.env.IBM_KEY
+    });
+
 
 // Google Map Static
 var publicConfig = {
@@ -63,26 +62,26 @@ app.post('/detect', function(req, res) {
     };
 
     return new Promise(function(resolve, reject) {
-            language.detectEntities(paragraph, options, function(err, data) {
-                if (err) {
-                    reject(err);
-                } else {
-                    var arr = [];
-                    for (var property in data) {
-                        if (data.hasOwnProperty(property)) {
-                            arr.push(data[property]);
-                        }
-                    }
-                    var results = _.flattenDeep(arr);
-                    resolve(results);
+            var parameters = {
+                text: req.body.text
+            };
+
+            alchemy_language.keywords(parameters, function (err, response) {
+                if (err) throw new Error(err);
+
+                else {
+                    var arr = _.map(response.keywords, function(keyword) {
+                        return { name: keyword.text };
+                    });
+                    resolve(arr);
                 }
+
             });
         })
         .then(function(entities) {
             var promises = [];
-
             _.forEach(entities, function(entity) {
-                promises.push(searchGoogle(entity));
+                // promises.push(searchGoogle(entity));
                 promises.push(searchGoogleImages(entity));
                 promises.push(searchWiki(entity));
                 // promises.push(searchTwitter(entity));
