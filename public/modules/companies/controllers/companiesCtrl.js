@@ -20,7 +20,9 @@ angular.module('companiesCtrl', ['companiesService', 'btford.socket-io'])
 
         return mySocket;
     })
-    .controller('companiesCtrl', function(mySocket, Cards, $sce, $http, $scope, $timeout, $q, $log, $stateParams, $rootScope, $timeout, $mdSidenav) {
+    .controller('companiesCtrl', ['$element', 'dragularService', function TodoCtrl($element, dragularService) {
+    dragularService('.containerVertical')
+  }], function(mySocket, Cards, $sce, $http, $scope, $timeout, $q, $log, $stateParams, $rootScope, $timeout, $mdSidenav) {
 
         self = this;
         // Side bar controller
