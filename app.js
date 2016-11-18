@@ -50,11 +50,13 @@ app.use('/scripts', express.static(__dirname + '/node_modules/'));
 app.use(express.static(__dirname + '/public'));
 
 var io = require('socket.io')();
-io.on('connection', function(client){
-    client.on('event', function(data){});
-    client.on('request', function(){
+io.on('connection', function(client) {
+    client.on('event', function(data) {});
+    client.on('request', function() {
         console.log('requested SOCKET');
-        client.emit('response', { some: 'data' });
+        client.emit('response', {
+            some: 'data'
+        });
     });
 });
 io.listen(3001);
@@ -76,12 +78,14 @@ app.post('/detect', function(req, res) {
                 text: req.body.text
             };
 
-            alchemy_language.keywords(parameters, function (err, response) {
+            alchemy_language.keywords(parameters, function(err, response) {
                 if (err) throw new Error(err);
 
                 else {
                     var arr = _.map(response.keywords, function(keyword) {
-                        return { name: keyword.text };
+                        return {
+                            name: keyword.text
+                        };
                     });
                     resolve(arr);
                 }
@@ -193,4 +197,3 @@ var searchWiki = function(entity) {
 //                 zoom: 0,
 //                 size: '800x400',
 //                 maptype: 'roadmap'
-
