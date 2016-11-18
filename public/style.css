@@ -12,6 +12,10 @@ h1, h2, h3, h4, h5, h6 {
 
 /*sidebar*/
 
+sidebar-top {
+    background: #f6f6f6;
+}
+
 blockquote {
     background: #f9f9f9;
     border-left: 10px solid #ccc;
@@ -424,9 +428,16 @@ md-input-container:not(.md-input-invalid).md-input-focused .md-input {
 }
 
 .monk_logo {
-    height: 50px;
-    margin-left: 150px;
+    height: 55px;
+    margin-left: 20px;
+    margin-top: 5px;
 }
+
+.monk_button {
+    margin-left:50px;
+    float:none;
+}
+
 .editor {
     width: 50%;
     margin-left: 25%;
