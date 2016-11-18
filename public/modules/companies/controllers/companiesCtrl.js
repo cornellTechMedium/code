@@ -1,5 +1,7 @@
 angular.module('companiesCtrl', ['companiesService'])
-    .controller('companiesCtrl', function(Cards, $sce, $http, $scope, $timeout, $q, $log, $stateParams, $rootScope, $timeout, $mdSidenav) {
+    .controller('companiesCtrl', ['$element', 'dragularService', function TodoCtrl($element, dragularService) {
+    dragularService('.containerVertical');
+  }], function(Cards, $sce, $http, $scope, $timeout, $q, $log, $stateParams, $rootScope, $timeout, $mdSidenav) {
 
         self = this;
         // Side bar controller

@@ -11,6 +11,8 @@ var materialApp = angular
     'challengesCtrl',
     'challengesService',
     'angularVideoBg',
+    'dragularModule',
+    'ngRoute'
 ]).config(function($mdThemingProvider) {
   $mdThemingProvider.theme('default')
     .primaryPalette('blue')

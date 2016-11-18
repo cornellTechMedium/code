@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/scripts/angular-material/angular-material.min.css"/>
     <link rel="stylesheet" href="style.css"/>
+    <link href='scripts/dragular/dist/dragular.css' rel='stylesheet' type='text/css' />
 </head>
 <body ng-app="materialApp" layout="row" ng-controller="appCtrl as app">
 
@@ -49,7 +50,24 @@
         </div>
     </md-toolbar>
     <div style="height: 100%;" ui-view></div>
+      <div class='wrapper' ng-controller="Basic">
+    <div class='containerVertical'>
+        <div>Move me, but you can only drop me in one of these containers.</div>
+        <div>If you try to drop me somewhere other than these containers, I'll just come back.</div>
+        <div>Item 3.</div>
+        <div>Item 6.</div>
+    </div>
+    <div class='containerVertical'>
+        <div>You can drop me in the left container, otherwise I'll stay here.</div>
+        <div ng-click="clicked = !clicked" ng-class="clicked && 'clickedClass'">Try to click me, dragular distinguish drag from click</div>
+        <div>Item 5.</div>
+    </div>
 </div>
+       
+</div>
+<script src="/scripts/angular/angular.js"></script>
+<script src="/scripts/angular-route/angular-route.js"></script>
+<script src='/scripts/dragular/dist/dragular.js'></script>
 <script src="/scripts/angular/angular.min.js"></script>
 <script src="/scripts/angular-animate/angular-animate.min.js"></script>
 <script src="/scripts/angular-aria/angular-aria.min.js"></script>
