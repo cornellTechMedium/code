@@ -43,14 +43,14 @@ module.controller('challengesCtrl', function(Tabs, Cards, $compile, $http, $sce,
 
         $scope.wikipedia += '</p></blockquote></div></div>';
 
-        // $scope.youtube = '<div class="wrapper" ng-controller="challengesCtrl"><div class="containerVertical">';
-        //
-        // entity.youtube.items.forEach(function(item) {
-        //     $scope.youtube += '<iframe width="304" src="http://www.youtube.com/embed/' +
-        //         item.id.videoId + '"</iframe>';
-        // });
-        //
-        // $scope.youtube += '</div></div>';
+        $scope.youtube = '<div class="wrapper" ng-controller="challengesCtrl"><div class="containerVertical">';
+
+        entity.youtube.items.forEach(function(item) {
+            $scope.youtube += '<iframe width="304" src="http://www.youtube.com/embed/' +
+                item.id.videoId + '"</iframe>';
+        });
+
+        $scope.youtube += '</div></div>';
 
     };
     $http.post('http://localhost:5000/detect', $rootScope.request)

@@ -99,7 +99,7 @@ app.post('/detect', function(req, res) {
                 promises.push(searchGoogleImages(entity));
                 promises.push(searchWiki(entity));
                 // promises.push(searchTwitter(entity));
-                // promises.push(searchYoutube(entity));
+                promises.push(searchYoutube(entity));
                 // promises.push(getMap(entity));
             });
             Promise
