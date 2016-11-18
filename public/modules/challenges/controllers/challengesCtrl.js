@@ -32,23 +32,25 @@ module.controller('challengesCtrl', function(Tabs, Cards, $compile, $http, $sce,
         var entity = $scope.data.hashmap[event.target.innerText];
 
         entity.googleImages.forEach(function(image) {
-            $scope.tooltip += '<div><img class="image-responsive containerVertical" src="' + image.url + '"/>' +
+            $scope.tooltip += '<div><img class="image-responsive" src="' + image.url + '"/>' +
                 '</md-grid-tile></div>';
         });
-        $scope.tooltip += '</div>';
+        $scope.tooltip += '</div></div>';
 
-        $scope.wikipedia = '<md-content layout-margin class="containerVertical"><p>';
+        $scope.wikipedia = '<div class="wrapper" ng-controller="challengesCtrl"><div class="containerVertical"><blockquote><p>';
 
         $scope.wikipedia += entity.wikipedia.itemListElement[0].result.detailedDescription.articleBody;
 
-        $scope.wikipedia += '</p></md-content>';
+        $scope.wikipedia += '</p></blockquote></div></div>';
 
-        $scope.youtube = '';
-
-        entity.youtube.items.forEach(function(item) {
-            $scope.youtube += '<iframe width="304" src="https://www.youtube.com/embed/' +
-                item.id.videoId + '"</iframe>';
-        });
+        // $scope.youtube = '<div class="wrapper" ng-controller="challengesCtrl"><div class="containerVertical">';
+        //
+        // entity.youtube.items.forEach(function(item) {
+        //     $scope.youtube += '<iframe width="304" src="http://www.youtube.com/embed/' +
+        //         item.id.videoId + '"</iframe>';
+        // });
+        //
+        // $scope.youtube += '</div></div>';
 
     };
     $http.post('http://localhost:5000/detect', $rootScope.request)

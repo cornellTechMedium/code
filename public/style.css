@@ -9,7 +9,38 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: 1rem;
 }
 
+
 /*sidebar*/
+
+blockquote {
+    background: #f9f9f9;
+    border-left: 10px solid #ccc;
+    margin: 1.5em 10px;
+    padding: 0.5em 10px;
+    quotes: "\201C""\201D""\2018""\2019";
+}
+
+blockquote:before {
+    color: #ccc;
+    content: open-quote;
+    font-size: 4em;
+    line-height: 0.1em;
+    margin-right: 0.25em;
+    vertical-align: -0.4em;
+}
+
+blockquote:after {
+    color: #ccc;
+    content: close-quote;
+    font-size: 4em;
+    line-height: 0.1em;
+    margin-left: 0.25em;
+    vertical-align: -0.4em;
+}
+
+blockquote p {
+    display: inline;
+}
 
 
 /* entypo */
@@ -93,6 +124,7 @@ md-tabs-canvas {
 
 
 /*sidebar*/
+
 .padding-inner {
     padding: 60px 5%;
 }
@@ -337,6 +369,7 @@ form.ng-pristine.ng-invalid.ng-invalid-required {
 .medium_share {
     margin-left: 400px;
 }
+
 .medium_share h1 {
     text-align: right;
     float: right;
@@ -346,6 +379,7 @@ form.ng-pristine.ng-invalid.ng-invalid-required {
 .medium_publish {
     margin-left: 15px;
 }
+
 .medium_publish h1 {
     text-align: left;
     margin-left: 15px;
@@ -388,6 +422,7 @@ md-input-container .md-input {
 md-input-container:not(.md-input-invalid).md-input-focused .md-input {
     border-color: white;
 }
+
 .monk_logo {
     height: 50px;
     margin-left: 150px;

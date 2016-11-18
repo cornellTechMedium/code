@@ -31,7 +31,7 @@
                         </md-tab>
                         <md-tab label="YouTube">
                             <md-content class="md-padding">
-                                <!-- <div tooltip="youtube"></div> -->
+                                <div tooltip="youtube"></div>
                             </md-content>
                         </md-tab>
                     </md-tabs>
@@ -43,18 +43,4 @@
             </md-button>
         </md-sidenav>
         <!-- Sidebar Part begin -->
-
-        <div class='wrapper' ng-controller="challengesCtrl">
-            <div class='containerVertical'>
-                <div>Move me, but you can only drop me in one of these containers.</div>
-                <div>If you try to drop me somewhere other than these containers, I'll just come back.</div>
-                <div>Item 3.</div>
-                <div>Item 6.</div>
-            </div>
-            <div class='containerVertical'>
-                <div>You can drop me in the left container, otherwise I'll stay here.</div>
-                <div ng-click="clicked = !clicked" ng-class="clicked && 'clickedClass'">Try to click me, dragular distinguish drag from click</div>
-                <div>Item 5.</div>
-            </div>
-        </div>
 </div>
