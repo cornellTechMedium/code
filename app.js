@@ -49,6 +49,16 @@ app.use('/scripts', express.static(__dirname + '/node_modules/'));
 
 app.use(express.static(__dirname + '/public'));
 
+var io = require('socket.io')();
+io.on('connection', function(client){
+    client.on('event', function(data){});
+    client.on('request', function(){
+        console.log('requested SOCKET');
+        client.emit('response', { some: 'data' });
+    });
+});
+io.listen(3001);
+
 app.listen(app.get('port'), function() {
     console.log('Node app is running on port', app.get('port'));
 });
@@ -183,9 +193,4 @@ var searchWiki = function(entity) {
 //                 zoom: 0,
 //                 size: '800x400',
 //                 maptype: 'roadmap'
-//             }
-//             entity['mapImage'] = gmAPI.staticMap(params).replace('zoom=', '');
-//             resolve(entity);
-//         });
-//     }
-// };
+

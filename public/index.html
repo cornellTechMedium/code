@@ -22,7 +22,6 @@
         <md-toolbar class="toolbar" style="position: fixed;">
             <div layout="row" layout-align="center center" layout-wrap class="md-toolbar-tools">
                 <div style="width:12%">
-                    <!--<img src="https://assets.ifttt.com/images/channels/1259075256/icons/large.png" alt="Medium icon" style="width:30px;height:30px;float:right">-->
                     <a href="/"><img src="assets/monk2.png" class="monk_logo" alt="Monk icon"></a>
                 </div>
                 <div class="medium_share">
@@ -32,21 +31,6 @@
                     <h1>Publish</h1>
                 </div>
                 <span flex></span>
-                <!--<md-button hide-xs class="md-primary navitem1" href="/companies">-->
-                <!--Companies-->
-                <!--</md-button>-->
-                <!--<md-button hide-xs class="md-primary navitem1" href="/timeline">-->
-                <!--Timeline-->
-                <!--</md-button>-->
-                <!--<md-button hide-xs class="md-primary navitem1" href="/challenges">-->
-                <!--Challenges-->
-                <!--</md-button>-->
-                <!--<md-button hide-md hide-sm hide-xs class="md-icon-button" href="https://github.com/agavish/itrek2017/issues" target="_blank">-->
-                <!--<md-icon md-svg-icon="assets/github.svg"></md-icon>-->
-                <!--</md-button>-->
-                <!--<md-button hide-gt-xs ng-click="app.toggleRight()" class="md-icon-button" aria-label="User Menu">-->
-                <!--<md-icon md-font-icon="fa-bars" class="md-menu-text-color fa s24"></md-icon>-->
-                <!--</md-button>-->
             </div>
         </md-toolbar>
         <div style="height: 100%;" ui-view></div>
@@ -65,6 +49,7 @@
         </div>
 
     </div>
+    <script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
     <script src="/scripts/angular/angular.js"></script>
     <script src="/scripts/angular-route/angular-route.js"></script>
     <script src='/scripts/dragular/dist/dragular.js'></script>
@@ -83,7 +68,7 @@
     <script src="app.controller.js"></script>
     <script src="app.js"></script>
     <script src="app.routes.js"></script>
-    <script type="text/javascript" src="https://secure.skypeassets.com/i/scom/js/skype-uri.js"></script>
+    <script src="socket.js"></script>
 </body>
 
 </html>
