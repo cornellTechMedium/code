@@ -37,11 +37,7 @@ module.controller('challengesCtrl', function(Tabs, Cards, $compile, $http, $sce,
         });
         $scope.tooltip += '</div></div>';
 
-        $scope.wikipedia = '<div class="wrapper" ng-controller="challengesCtrl"><div class="containerVertical"><blockquote><p>';
-
-        $scope.wikipedia += entity.wikipedia.itemListElement[0].result.detailedDescription.articleBody;
-
-        $scope.wikipedia += '</p><br><p style="text-align:right"><i>—WikiPedia</i></p></blockquote></div></div>';
+        $scope.wikipedia = '<div class="wrapper" ng-controller="challengesCtrl"><div class="containerVertical"><blockquote><p>' + entity.wikipedia.itemListElement[0].result.detailedDescription.articleBody + '</p><br><p style="text-align:right"><i>—WikiPedia</i></p></blockquote></div></div>';
 
         $scope.youtube = '<div class="wrapper" ng-controller="challengesCtrl"><div class="containerVertical">';
 
