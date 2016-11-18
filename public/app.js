@@ -10,7 +10,7 @@ var materialApp = angular
     'timeLineService',
     'challengesCtrl',
     'challengesService',
-    'angularVideoBg'
+    'angularVideoBg',
 ]).config(function($mdThemingProvider) {
   $mdThemingProvider.theme('default')
     .primaryPalette('blue')

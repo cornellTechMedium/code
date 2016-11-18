@@ -1,8 +1,19 @@
 var module = angular.module('challengesCtrl', ['challengesService', 'companiesService']);
 
-module.controller('challengesCtrl', function(Tabs, Cards, $compile, $http, $sce, $scope, $stateParams, $rootScope) {
-	
-	self = this;
+module.controller('challengesCtrl', function(Tabs, Cards, $compile, $http, $sce, $scope, $stateParams, $rootScope, $timeout, $mdSidenav) {
+
+    self = this;
+
+    // Side bar controller
+    $scope.toggleLeft = buildToggler('left');
+    $scope.toggleRight = buildToggler('right');
+
+    function buildToggler(componentId) {
+        return function() {
+            $mdSidenav(componentId).toggle();
+        }
+    }
+    // Side bar controller
 
     $scope.result = '<p>' + $rootScope.request.text + '</p>';
 
@@ -10,16 +21,16 @@ module.controller('challengesCtrl', function(Tabs, Cards, $compile, $http, $sce,
 
 
         $scope.tooltip = '<md-title>Images</md-title><md-content layout-padding>' +
-            '<md-grid-list  md-cols-gt-md="12" md-cols="3" md-cols-md="8" md-row-height-gt-md="1:1" md-row-height="4:3" md-gutter-gt-md="16px" md-gutter-md="8px" md-gutter="4px" >';
+            '<md-grid-list md-cols="1" md-row-height="fit" style="height: 400px;">';
 
         var entity = $scope.data.hashmap[event.target.innerText];
 
         entity.googleImages.forEach(function(image) {
-           $scope.tooltip += '<md-grid-tile md-rowspan="2" md-colspan="2" md-colspan-sm="1" md-colspan-xs="1">' +
-               '<img class="image-responsive" src="' + image.url +'"/>' +
-               '</md-grid-tile>';
+            $scope.tooltip += '<md-grid-tile md-rowspan="1" md-colspan="1" md-colspan-sm="1" md-colspan-xs="1">' +
+                '<img class="image-responsive" src="' + image.url + '"/>' +
+                '</md-grid-tile>';
         });
-        $scope.tooltip +=  '</md-grid-list></md-content>';
+        $scope.tooltip += '</md-grid-list></md-content>';
 
         $scope.wikipedia = '<md-title>Wikipedia</md-title><p>';
 
@@ -56,11 +67,11 @@ module.controller('challengesCtrl', function(Tabs, Cards, $compile, $http, $sce,
 
 });
 
-module.directive('dynamic', function ($compile) {
+module.directive('dynamic', function($compile) {
     return {
         restrict: 'A',
         replace: true,
-        link: function (scope, ele, attrs) {
+        link: function(scope, ele, attrs) {
             scope.$watch(attrs.dynamic, function(html) {
                 ele.html(html);
                 $compile(ele.contents())(scope);
@@ -69,11 +80,11 @@ module.directive('dynamic', function ($compile) {
     };
 });
 
-module.directive('tooltip', function ($compile) {
+module.directive('tooltip', function($compile) {
     return {
         restrict: 'A',
         replace: true,
-        link: function (scope, ele, attrs) {
+        link: function(scope, ele, attrs) {
             scope.$watch(attrs.tooltip, function(html) {
                 ele.html(html);
                 $compile(ele.contents())(scope);
@@ -82,11 +93,11 @@ module.directive('tooltip', function ($compile) {
     };
 });
 
-module.directive('wikipedia', function ($compile) {
+module.directive('wikipedia', function($compile) {
     return {
         restrict: 'A',
         replace: true,
-        link: function (scope, ele, attrs) {
+        link: function(scope, ele, attrs) {
             scope.$watch(attrs.tooltip, function(html) {
                 ele.html(html);
                 $compile(ele.contents())(scope);
@@ -95,11 +106,11 @@ module.directive('wikipedia', function ($compile) {
     };
 });
 
-module.directive('youtube', function ($compile) {
+module.directive('youtube', function($compile) {
     return {
         restrict: 'A',
         replace: true,
-        link: function (scope, ele, attrs) {
+        link: function(scope, ele, attrs) {
             scope.$watch(attrs.tooltip, function(html) {
                 ele.html(html);
                 $compile(ele.contents())(scope);
