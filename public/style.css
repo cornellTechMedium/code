@@ -434,7 +434,11 @@ md-input-container:not(.md-input-invalid).md-input-focused .md-input {
 }
 
 .monk_button {
-    margin-left:50px;
+    margin-left:55px;
+    overflow-y:auto;
+    width: 100px;
+    height: 55px;
+    position: absolute;
     float:none;
 }
 
