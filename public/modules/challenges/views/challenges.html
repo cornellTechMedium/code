@@ -10,10 +10,29 @@
             <h1 class="md-toolbar-tools">Disabled Backdrop</h1>
         </md-toolbar>
         <md-content layout-margin>
-            <div tooltip="tooltip"></div>
 
-            <div tooltip="wikipedia"></div>
-            <div tooltip="youtube"></div>
+            <div ng-cloak>
+                <md-content>
+                    <md-tabs md-dynamic-height md-border-bottom>
+                        <md-tab label="Image">
+                            <md-content class="md-padding">
+                                <div tooltip="tooltip"></div>
+                            </md-content>
+                        </md-tab>
+                        <md-tab label="Wikipedia">
+                            <md-content class="md-padding">
+                                <div tooltip="wikipedia"></div>
+                            </md-content>
+                        </md-tab>
+                        <md-tab label="YouTube">
+                            <md-content class="md-padding">
+                                <div tooltip="youtube"></div>
+                            </md-content>
+                        </md-tab>
+                    </md-tabs>
+                </md-content>
+            </div>
+            
             <md-button ng-click="toggleLeft()" class="md-accent">
                 Close this Sidenav
             </md-button>
