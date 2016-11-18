@@ -7,12 +7,19 @@ module.controller('challengesCtrl', function(Tabs, Cards, $compile, $http, $sce,
     // Side bar controller
     $scope.toggleLeft = buildToggler('left');
     $scope.toggleRight = buildToggler('right');
+	$scope.openLeft = buildTogglerOpen('left');
 
     function buildToggler(componentId) {
         return function() {
             $mdSidenav(componentId).toggle();
         }
     }
+
+	function buildTogglerOpen(componentId) {
+		return function() {
+			$mdSidenav(componentId).open();
+		}
+	}
     // Side bar controller
 
     $scope.result = '<p>' + $rootScope.request.text + '</p>';
@@ -20,7 +27,7 @@ module.controller('challengesCtrl', function(Tabs, Cards, $compile, $http, $sce,
     $scope.openTooltip = function(event) {
 
 
-        $scope.tooltip = '<md-title>Images</md-title><md-content layout-padding>' +
+        $scope.tooltip = '<md-content layout-padding>' +
             '<md-grid-list md-cols="1" md-row-height="fit" style="height: 400px;">';
 
         var entity = $scope.data.hashmap[event.target.innerText];
@@ -32,16 +39,16 @@ module.controller('challengesCtrl', function(Tabs, Cards, $compile, $http, $sce,
         });
         $scope.tooltip += '</md-grid-list></md-content>';
 
-        $scope.wikipedia = '<md-title>Wikipedia</md-title><p>';
+        $scope.wikipedia = '';
 
         $scope.wikipedia += entity.wikipedia.itemListElement[0].result.detailedDescription.articleBody;
 
         $scope.wikipedia += '</p>';
 
-        $scope.youtube = '<md-title>YouTube</md-title><p>';
+        $scope.youtube = '';
 
         entity.youtube.items.forEach(function(item) {
-            $scope.youtube += '<iframe width="420" height="315" src="https://www.youtube.com/embed/' +
+            $scope.youtube += '<iframe width="304" src="https://www.youtube.com/embed/' +
                 item.id.videoId + '"</iframe>';
         });
 
@@ -54,7 +61,7 @@ module.controller('challengesCtrl', function(Tabs, Cards, $compile, $http, $sce,
                 var index = $scope.result.indexOf(entity.name);
 
                 if (index != -1) {
-                    var output = $scope.result.substr(0, index) + '<span class="highlight" ng-click="openTooltip($event)">' +
+                    var output = $scope.result.substr(0, index) + '<span class="highlight md-accent" ng-click="openLeft(); openTooltip($event)">' +
                         $scope.result.substr(index, entity.name.length) + '</span>' + $scope.result.substr(index + entity.name.length);
 
                     $scope.result = output;

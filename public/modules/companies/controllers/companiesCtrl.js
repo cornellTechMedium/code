@@ -4,11 +4,18 @@ angular.module('companiesCtrl', ['companiesService'])
         self = this;
         // Side bar controller
         $scope.toggleLeft = buildToggler('left');
+		$scope.openLeft = buildTogglerOpen('left');
         $scope.toggleRight = buildToggler('right');
 
         function buildToggler(componentId) {
             return function() {
                 $mdSidenav(componentId).toggle();
+            }
+        }
+
+		function buildTogglerOpen(componentId) {
+            return function() {
+                $mdSidenav(componentId).open();
             }
         }
         // Side bar controller

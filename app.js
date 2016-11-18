@@ -134,7 +134,7 @@ var searchGoogleImages = function(entity) {
 
 var searchYoutube = function(entity) {
     return new Promise(function(resolve, reject) {
-        youTube.search(entity.name, 3, function(error, result) {
+        youTube.search(entity.name, 10, function(error, result) {
             entity["youtube"] = result;
             resolve(entity);
         });

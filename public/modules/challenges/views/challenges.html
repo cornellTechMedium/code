@@ -1,55 +1,46 @@
+<aside id="sticky-social">
+    <ul>
+        <li><a ng-click="toggleLeft()" class="entypo-brush md-raised" target="_blank"><span>Monk</span></a></li>
+    </ul>
+</aside>
+
 <div class="padding-inner">
     <div dynamic="result"></div>
-
-
-
 
     <!-- Sidebar Part begin -->
     <md-sidenav class="md-sidenav-left" md-component-id="left" md-disable-backdrop md-whiteframe="4">
         <md-toolbar class="md-theme-indigo">
-            <h1 class="md-toolbar-tools">Disabled Backdrop</h1>
+            <h1 class="md-toolbar-tools">Disabled Backdrop <md-button ng-click="toggleLeft()" class="md-accent">
+                Close
+            </md-button> </h1>
         </md-toolbar>
-        <md-content layout-margin>
 
-            <div ng-cloak>
-                <md-content>
-                    <md-tabs md-dynamic-height md-border-bottom>
-                        <md-tab label="Image">
-                            <md-content class="md-padding">
-                                <div tooltip="tooltip"></div>
-                            </md-content>
-                        </md-tab>
-                        <md-tab label="Wikipedia">
-                            <md-content class="md-padding">
-                                <div tooltip="wikipedia"></div>
-                            </md-content>
-                        </md-tab>
-                        <md-tab label="YouTube">
-                            <md-content class="md-padding">
-                                <div tooltip="youtube"></div>
-                            </md-content>
-                        </md-tab>
-                    </md-tabs>
-                </md-content>
-            </div>
-            
-            <md-button ng-click="toggleLeft()" class="md-accent">
-                Close this Sidenav
-            </md-button>
-        </md-content>
-    </md-sidenav>
 
-    <md-content flex layout-padding>
-        <div layout="column" layout-align="top center">
-            <p>
-                Developers can also disable the backdrop of the sidenav.<br/> This will disable the functionality to click outside to close the sidenav.
-            </p>
-            <div>
-                <md-button ng-click="toggleLeft()" class="md-raised">
-                    Toggle Sidenav
-                </md-button>
-            </div>
+        <div ng-cloak>
+            <md-content>
+                <md-tabs md-dynamic-height md-border-bottom>
+                    <md-tab label="Image">
+                        <md-content class="md-padding">
+                            <div tooltip="tooltip"></div>
+                        </md-content>
+                    </md-tab>
+                    <md-tab label="Wikipedia">
+                        <md-content class="md-padding">
+                            <div tooltip="wikipedia"></div>
+                        </md-content>
+                    </md-tab>
+                    <md-tab label="YouTube">
+                        <md-content class="md-padding">
+                            <div tooltip="youtube"></div>
+                        </md-content>
+                    </md-tab>
+                </md-tabs>
+            </md-content>
         </div>
-    </md-content>
+
+        <md-button ng-click="toggleLeft()" class="md-accent">
+            Close this Sidenav
+        </md-button>
+    </md-sidenav>
     <!-- Sidebar Part begin -->
 </div>
