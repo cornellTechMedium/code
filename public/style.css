@@ -334,16 +334,22 @@ form.ng-pristine.ng-invalid.ng-invalid-required {
     font-size: 15px;
 }
 
+.medium_share {
+    margin-left: 400px;
+}
 .medium_share h1 {
     text-align: right;
     float: right;
     font-size: 15px;
 }
 
+.medium_publish {
+    margin-left: 15px;
+}
 .medium_publish h1 {
     text-align: left;
-    float: left;
     margin-left: 15px;
+    margin-right: 150px;
     font-size: 15px;
     color: #3cb371;
 }
@@ -381,4 +387,8 @@ md-input-container .md-input {
 
 md-input-container:not(.md-input-invalid).md-input-focused .md-input {
     border-color: white;
+}
+.monk_logo {
+    height: 50px;
+    margin-left: 150px;
 }
