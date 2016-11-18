@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>Cornell Tech Medium Challenge</title>
     <base href="/" />
@@ -10,79 +11,81 @@
     <link rel='stylesheet' href='//fonts.googleapis.com/css?family=Open+Sans:400,700'>
     <link rel="shortcut icon" href="assets/favicon.ico">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/scripts/angular-material/angular-material.min.css"/>
-    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="/scripts/angular-material/angular-material.min.css" />
+    <link rel="stylesheet" href="style.css" />
     <link href='scripts/dragular/dist/dragular.css' rel='stylesheet' type='text/css' />
 </head>
+
 <body ng-app="materialApp" layout="row" ng-controller="appCtrl as app">
 
-<div style="width:100%" class="ng-cloak">
-    <md-toolbar class="toolbar" style="position: fixed;">
-        <div layout="row" layout-align="center center" layout-wrap class="md-toolbar-tools">
-            <div style="width:12%">
-                <img src="https://assets.ifttt.com/images/channels/1259075256/icons/large.png" alt="Medium icon" style="width:30px;height:30px;float:right">
-            </div>
-            <div style="width:8%" class="medium_title">
-                <h1>Draft</h1>
-            </div>
-            <div style="width:51%" class="medium_share">
-                <h1>Share</h1>
-            </div>
-            <div style="width:29%" class="medium_publish">
-                <h1>Publish</h1>
-            </div>
-            <span flex></span>
-            <!--<md-button hide-xs class="md-primary navitem1" href="/companies">-->
+    <div style="width:100%" class="ng-cloak">
+        <md-toolbar class="toolbar" style="position: fixed;">
+            <div layout="row" layout-align="center center" layout-wrap class="md-toolbar-tools">
+                <div style="width:12%">
+                    <img src="https://assets.ifttt.com/images/channels/1259075256/icons/large.png" alt="Medium icon" style="width:30px;height:30px;float:right">
+                </div>
+                <div style="width:8%" class="medium_title">
+                    <h1>Draft</h1>
+                </div>
+                <div style="width:51%" class="medium_share">
+                    <h1>Share</h1>
+                </div>
+                <div style="width:29%" class="medium_publish">
+                    <h1>Publish</h1>
+                </div>
+                <span flex></span>
+                <!--<md-button hide-xs class="md-primary navitem1" href="/companies">-->
                 <!--Companies-->
-            <!--</md-button>-->
-            <!--<md-button hide-xs class="md-primary navitem1" href="/timeline">-->
+                <!--</md-button>-->
+                <!--<md-button hide-xs class="md-primary navitem1" href="/timeline">-->
                 <!--Timeline-->
-            <!--</md-button>-->
-            <!--<md-button hide-xs class="md-primary navitem1" href="/challenges">-->
+                <!--</md-button>-->
+                <!--<md-button hide-xs class="md-primary navitem1" href="/challenges">-->
                 <!--Challenges-->
-            <!--</md-button>-->
-            <!--<md-button hide-md hide-sm hide-xs class="md-icon-button" href="https://github.com/agavish/itrek2017/issues" target="_blank">-->
+                <!--</md-button>-->
+                <!--<md-button hide-md hide-sm hide-xs class="md-icon-button" href="https://github.com/agavish/itrek2017/issues" target="_blank">-->
                 <!--<md-icon md-svg-icon="assets/github.svg"></md-icon>-->
-            <!--</md-button>-->
-            <!--<md-button hide-gt-xs ng-click="app.toggleRight()" class="md-icon-button" aria-label="User Menu">-->
+                <!--</md-button>-->
+                <!--<md-button hide-gt-xs ng-click="app.toggleRight()" class="md-icon-button" aria-label="User Menu">-->
                 <!--<md-icon md-font-icon="fa-bars" class="md-menu-text-color fa s24"></md-icon>-->
-            <!--</md-button>-->
+                <!--</md-button>-->
+            </div>
+        </md-toolbar>
+        <div style="height: 100%;" ui-view></div>
+        <div class='wrapper' ng-controller="Basic">
+            <div class='containerVertical'>
+                <div>Move me, but you can only drop me in one of these containers.</div>
+                <div>If you try to drop me somewhere other than these containers, I'll just come back.</div>
+                <div>Item 3.</div>
+                <div>Item 6.</div>
+            </div>
+            <div class='containerVertical'>
+                <div>You can drop me in the left container, otherwise I'll stay here.</div>
+                <div ng-click="clicked = !clicked" ng-class="clicked && 'clickedClass'">Try to click me, dragular distinguish drag from click</div>
+                <div>Item 5.</div>
+            </div>
         </div>
-    </md-toolbar>
-    <div style="height: 100%;" ui-view></div>
-      <div class='wrapper' ng-controller="Basic">
-    <div class='containerVertical'>
-        <div>Move me, but you can only drop me in one of these containers.</div>
-        <div>If you try to drop me somewhere other than these containers, I'll just come back.</div>
-        <div>Item 3.</div>
-        <div>Item 6.</div>
+
     </div>
-    <div class='containerVertical'>
-        <div>You can drop me in the left container, otherwise I'll stay here.</div>
-        <div ng-click="clicked = !clicked" ng-class="clicked && 'clickedClass'">Try to click me, dragular distinguish drag from click</div>
-        <div>Item 5.</div>
-    </div>
-</div>
-       
-</div>
-<script src="/scripts/angular/angular.js"></script>
-<script src="/scripts/angular-route/angular-route.js"></script>
-<script src='/scripts/dragular/dist/dragular.js'></script>
-<script src="/scripts/angular/angular.min.js"></script>
-<script src="/scripts/angular-animate/angular-animate.min.js"></script>
-<script src="/scripts/angular-aria/angular-aria.min.js"></script>
-<script src="/scripts/angular-material/angular-material.min.js"></script>
-<script type="text/javascript" src="/scripts/angular-ui-router/release/angular-ui-router.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-video-bg/0.3.3/angular-video-bg.min.js"></script>
-<script src="modules/companies/controllers/companiesCtrl.js"></script>
-<script src="modules/companies/services/companiesService.js"></script>
-<script src="modules/timeline/controllers/timeLineCtrl.js"></script>
-<script src="modules/timeline/services/timeLineService.js"></script>
-<script src="modules/challenges/controllers/challengesCtrl.js"></script>
-<script src="modules/challenges/services/challengesService.js"></script>
-<script src="app.controller.js"></script>
-<script src="app.js"></script>
-<script src="app.routes.js"></script>
-<script type="text/javascript" src="https://secure.skypeassets.com/i/scom/js/skype-uri.js"></script>
+    <script src="/scripts/angular/angular.js"></script>
+    <script src="/scripts/angular-route/angular-route.js"></script>
+    <script src='/scripts/dragular/dist/dragular.js'></script>
+    <script src="/scripts/angular/angular.min.js"></script>
+    <script src="/scripts/angular-animate/angular-animate.min.js"></script>
+    <script src="/scripts/angular-aria/angular-aria.min.js"></script>
+    <script src="/scripts/angular-material/angular-material.min.js"></script>
+    <script type="text/javascript" src="/scripts/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-video-bg/0.3.3/angular-video-bg.min.js"></script>
+    <script src="modules/companies/controllers/companiesCtrl.js"></script>
+    <script src="modules/companies/services/companiesService.js"></script>
+    <script src="modules/timeline/controllers/timeLineCtrl.js"></script>
+    <script src="modules/timeline/services/timeLineService.js"></script>
+    <script src="modules/challenges/controllers/challengesCtrl.js"></script>
+    <script src="modules/challenges/services/challengesService.js"></script>
+    <script src="app.controller.js"></script>
+    <script src="app.js"></script>
+    <script src="app.routes.js"></script>
+    <script type="text/javascript" src="https://secure.skypeassets.com/i/scom/js/skype-uri.js"></script>
 </body>
+
 </html>

@@ -8,13 +8,6 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 1rem;
     margin-top: 1rem;
 }
-<<<<<<< HEAD
-.clickedClass {
-  background-color: orange !important;
-}
-
-=======
-
 
 /*sidebar*/
 
@@ -100,8 +93,6 @@ md-tabs-canvas {
 
 
 /*sidebar*/
-
->>>>>>> 05f639e7db873b29989ad04006ceb0706d56091e
 .padding-inner {
     padding: 60px 5%;
 }
