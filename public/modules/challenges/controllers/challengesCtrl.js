@@ -39,7 +39,7 @@ module.controller('challengesCtrl', function(Tabs, Cards, $compile, $http, $sce,
 
         $scope.wikipedia = '<div class="wrapper" ng-controller="challengesCtrl"><div class="containerVertical"><blockquote><p>';
 
-        $scope.wikipedia += entity.wikipedia.itemListElement[0].result.detailedDescription.articleBody ;
+        $scope.wikipedia += entity.wikipedia.itemListElement[0].result.detailedDescription.articleBody;
 
         $scope.wikipedia += '</p><br><p style="text-align:right"><i>—WikiPedia</i></p></blockquote></div></div>';
 
