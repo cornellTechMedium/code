@@ -392,3 +392,7 @@ md-input-container:not(.md-input-invalid).md-input-focused .md-input {
     height: 50px;
     margin-left: 150px;
 }
+.editor {
+    width: 50%;
+    margin-left: 25%;
+}

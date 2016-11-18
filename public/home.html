@@ -1,13 +1,13 @@
 <div class="padding-inner">
     <div data-ng-controller="companiesCtrl">
-        <md-content layout-padding>
+        <md-content class="editor" layout-padding>
             <div>
                 <form name="contactForm" class="ourForm" style="display: block;">
                     <div layout-gt-xs="row">
 
-                        <md-input-container style="width: 100%;">
+                        <md-input-container md-no-float style="width: 100%;">
                             <!--<label>Tell your story..</label>-->
-                            <textarea ng-model="user.contactMsg" rows="10"></textarea>
+                            <textarea placeholder="Start typing" ng-model="user.contactMsg" rows="10"></textarea>
                         </md-input-container>
 
                     </div>
